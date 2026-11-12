@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net11.0-windows</TargetFramework>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicManager.Testing\ClinicManager.Testing.csproj" />
+    <ProjectReference Include="..\..\Desktop\ClinicManager.Win\ClinicManager.Win.csproj" />
+  /ItemGroup>
+
+</Project>
