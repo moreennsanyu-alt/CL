@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <TargetFramework>net11.0-windows</TargetFramework>
-    <AssemblyName>ClinicMgr</AssemblyName>
-    <UseWPF>true</UseWPF>
     <OutputType>WinExe</OutputType>
+    <TargetFramework>net11.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>ClinicMgr</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClinicManager.Core\ClinicManager.Core.csproj" />
+    <PackageReference Include="Prism.DryIoc" />
+    <PackageReference Include="DryIoc.Microsoft.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="NsDepCop" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  NsDepCop enforces namespace dependency rules at compile time (https://github.com/realvizu/NsDepCop).
+  ClinicManager.Win is a single project, so these rules keep the layers apart.
+  "Ns.*" matches Ns and all of its child namespaces. Disallowed rules always win over Allowed rules.
+
+  Layering (outer -> inner):  Views -> ViewModels -> Services -> Net
+  Presentation (Mvvm, Behaviors, Animation, Controls) is shared UI infrastructure at the bottom.
+-->
+<NsDepCopConfig>
+    <Allowed From="*" To="*" />
+
+    <!-- Presentation is reusable UI plumbing: it must not know about the application layers. -->
+    <Disallowed From="ClinicManager.Win.Presentation.*" To="ClinicManager.Win.Views.*" />
+    <Disallowed From="ClinicManager.Win.Presentation.*" To="ClinicManager.Win.ViewModels.*" />
+    <Disallowed From="ClinicManager.Win.Presentation.*" To="ClinicManager.Win.Features.*" />
+    <Disallowed From="ClinicManager.Win.Presentation.*" To="ClinicManager.Win.Services.*" />
+    <Disallowed From="ClinicManager.Win.Presentation.*" To="ClinicManager.Win.Net.*" />
+
+    <!-- Net (HTTP clients etc.) is the innermost layer. -->
+    <Disallowed From="ClinicManager.Win.Net.*" To="ClinicManager.Win.Views.*" />
+    <Disallowed From="ClinicManager.Win.Net.*" To="ClinicManager.Win.ViewModels.*" />
+    <Disallowed From="ClinicManager.Win.Net.*" To="ClinicManager.Win.Features.*" />
+    <Disallowed From="ClinicManager.Win.Net.*" To="ClinicManager.Win.Services.*" />
+    <Disallowed From="ClinicManager.Win.Net.*" To="ClinicManager.Win.Presentation.*" />
+
+    <!-- Services sit on top of Net and know nothing about UI. -->
+    <Disallowed From="ClinicManager.Win.Services.*" To="ClinicManager.Win.Views.*" />
+    <Disallowed From="ClinicManager.Win.Services.*" To="ClinicManager.Win.ViewModels.*" />
+    <Disallowed From="ClinicManager.Win.Services.*" To="ClinicManager.Win.Features.*" />
+    <Disallowed From="ClinicManager.Win.Services.*" To="ClinicManager.Win.Presentation.*" />
+
+    <!-- ViewModels never reference Views, and reach the network only through Services. -->
+    <Disallowed From="ClinicManager.Win.ViewModels.*" To="ClinicManager.Win.Views.*" />
+    <Disallowed From="ClinicManager.Win.ViewModels.*" To="ClinicManager.Win.Net.*" />
+
+    <!-- Views bind to ViewModels; they don't call Services or Net directly. -->
+    <Disallowed From="ClinicManager.Win.Views.*" To="ClinicManager.Win.Services.*" />
+    <Disallowed From="ClinicManager.Win.Views.*" To="ClinicManager.Win.Net.*" />
+
+    <!-- Features must not reach into Views/ViewModels of the shell. -->
+    <Disallowed From="ClinicManager.Win.Features.*" To="ClinicManager.Win.Views.*" />
+    <Disallowed From="ClinicManager.Win.Features.*" To="ClinicManager.Win.ViewModels.*" />
+    <!-- Feature slices are independent of one another. When you add slices, add a pair per slice, e.g.:
+    <Disallowed From="ClinicManager.Win.Features.Patients.*" To="ClinicManager.Win.Features.Appointments.*" />
+    <Disallowed From="ClinicManager.Win.Features.Appointments.*" To="ClinicManager.Win.Features.Patients.*" />
+    -->
+
+    <AnalyzerConfig>
+        <IssueKind Name="IllegalDependency" Severity="Error" />
+    </AnalyzerConfig>
+</NsDepCopConfig>
