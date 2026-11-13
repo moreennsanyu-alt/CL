@@ -66,5 +66,7 @@
 
     <PackageVersion Include="xunit.v3" Version="4.0.3" />
     <PackageVersion Include="NSubstitute" Version="6.2.0" />
+    <PackageVersion Include="NsDepCop" Version="3.3.0" />
+ 
   </ItemGroup>
 </Project>
