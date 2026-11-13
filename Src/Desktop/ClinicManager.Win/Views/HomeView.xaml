@@ -1,0 +1,11 @@
+<UserControl x:Class="ClinicManager.Win.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             AutomationProperties.AutomationId="HomeView">
+    <Grid Margin="16">
+        <TextBlock x:Name="HomeTitleText" AutomationProperties.AutomationId="HomeTitleText"
+                   Style="{StaticResource HeadingTextStyle}" Text="Home" />
+    </Grid>
+</UserControl>
