@@ -23,10 +23,7 @@ global using Microsoft.Extensions.Primitives;
 global using System.Net.Http;
 global using System.Text.Json;
 global using System.Text.RegularExpressions;
-
-// ServiceStack
-global using ServiceStack;
-global using ServiceStack.Text;
+global using System.IO;
 
 // Prism (v9 namespaces)
 global using Prism.Commands;
