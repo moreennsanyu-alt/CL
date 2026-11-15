@@ -3,11 +3,23 @@
   <PropertyGroup>
     <TargetFramework>net11.0-windows</TargetFramework>
     <OutputType>Exe</OutputType>
+    <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClinicManager.Testing\ClinicManager.Testing.csproj" />
     <ProjectReference Include="..\..\Desktop\ClinicManager.Win\ClinicManager.Win.csproj" />
-  /ItemGroup>
+  </ItemGroup>
 
+  <ItemGroup>
+  <PackageReference Include="xunit.v3" />
+  <PackageReference Include="Xunit.DependencyInjection" />
+  <PackageReference Include="NetEvolve.Extensions.XUnit.V3" />
+  <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+  <PackageReference Include="NSubstitute" />
+  <PackageReference Include="NSubstitute.Analyzers.CSharp" />
+  <PackageReference Include="MockQueryable.NSubstitute" />
+  <PackageReference Include="FluentAssertions" />
+  <PackageReference Include="Verify" />
+</ItemGroup> 
 </Project>
