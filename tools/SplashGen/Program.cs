@@ -19,6 +19,10 @@ for (int i = 0; i + 1 < args.Length; i += 2)
     if (args[i].StartsWith("--")) o[args[i][2..]] = args[i + 1];
 o["version"] = o["version"].TrimStart('v', 'V');
 
+// light palette
+const string BG = "#F3F9FB", NAVY = "#0B3C5D", TEAL = "#1B8A8F", MINT = "#3CC4A8",
+             CORAL = "#FF7B7B", SAND = "#F6C85F", MUTED = "#4A6B7C", BAND = "#E3F1F6";
+
 const int W = 800, H = 500;
 Color C(string hex) => ColorTranslator.FromHtml(hex);
 SolidBrush B(string hex) => new SolidBrush(C(hex));
@@ -30,7 +34,7 @@ using var g = Graphics.FromImage(bmp);
 g.SmoothingMode = SmoothingMode.AntiAlias;
 g.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
 g.PixelOffsetMode = PixelOffsetMode.HighQuality;
-g.Clear(C("#0B3C5D"));
+g.Clear(C(BG));
 
 static GraphicsPath Round(float x, float y, float w, float h, float r)
 {
@@ -50,64 +54,72 @@ void FillRound(string hex, float x, float y, float w, float h, float r)
 }
 void Oval(string hex, float x, float y, float w, float h) { using var b = B(hex); g.FillEllipse(b, x, y, w, h); }
 
-// background shapes
-Oval("#1B8A8F", -120, -140, 380, 380);
-Oval("#3CC4A8", -60, -80, 210, 210);
-Oval("#1B8A8F", 560, 300, 400, 400);
-Oval("#4FA8E0", 640, 380, 260, 260);
-using (var b = B("#124E75"))
+// background shapes (soft pastels)
+Oval("#D2EDEA", -120, -140, 380, 380);
+Oval("#A9E3D4", -60, -80, 210, 210);
+Oval("#D3E8F7", 560, 300, 400, 400);
+Oval("#AFD6F2", 640, 380, 260, 260);
+using (var b = B("#E1F0F5"))
     g.FillPolygon(b, new[] { new PointF(800, 0), new PointF(800, 170), new PointF(630, 0) });
 for (int r = 0; r < 4; r++)
     for (int c = 0; c < 6; c++)
-        Oval("#1D5F85", 560 + c * 18, 190 + r * 18, 6, 6);
+        Oval("#BFDDE6", 560 + c * 18, 190 + r * 18, 6, 6);
 
 // logo badge
 float bx = 80, by = 140, bs = 150;
-FillRound("#082B42", bx + 8, by + 8, bs, bs, 34);
+FillRound("#D3E4EA", bx + 6, by + 8, bs, bs, 34);   // soft shadow
 FillRound("#FFFFFF", bx, by, bs, bs, 34);
 float cx = bx + bs / 2, cy = by + bs / 2 - 8, t = 22, L = 46;
-FillRound("#FF6B6B", cx - t, cy - L, t * 2, L * 2, 6);
-FillRound("#FF6B6B", cx - L, cy - t, L * 2, t * 2, 6);
-FillRound("#3CC4A8", cx - t + 6, cy - L + 6, (t - 6) * 2, (L - 6) * 2, 3);
-FillRound("#3CC4A8", cx - L + 6, cy - t + 6, (L - 6) * 2, (t - 6) * 2, 3);
+FillRound(CORAL, cx - t, cy - L, t * 2, L * 2, 6);
+FillRound(CORAL, cx - L, cy - t, L * 2, t * 2, 6);
+FillRound(MINT, cx - t + 6, cy - L + 6, (t - 6) * 2, (L - 6) * 2, 3);
+FillRound(MINT, cx - L + 6, cy - t + 6, (L - 6) * 2, (t - 6) * 2, 3);
 FillRound("#FFFFFF", cx - t, cy - t, t * 2, t * 2, 4);
 float y0 = by + bs - 26;
 var beat = new (float x, float y)[] { (22, 0), (55, 0), (68, -18), (82, 14), (95, -8), (104, 0), (bs - 22, 0) }
     .Select(p => new PointF(bx + p.x, y0 + p.y)).ToArray();
-using (var pen = new Pen(C("#0B3C5D"), 4) { LineJoin = LineJoin.Round, StartCap = LineCap.Round, EndCap = LineCap.Round })
+using (var pen = new Pen(C(NAVY), 4) { LineJoin = LineJoin.Round, StartCap = LineCap.Round, EndCap = LineCap.Round })
     g.DrawLines(pen, beat);
 
-// title block
+// title block (typographic format = no side padding, so measuring is exact)
 float tx = 270;
-using (var f = F(54, FontStyle.Bold)) { using var b = B("#FFFFFF"); g.DrawString(o["title"], f, b, tx - 4, 146); }
-using (var f = F(54, FontStyle.Bold)) { using var b = B("#F6C85F"); g.DrawString(o["year"], f, b, tx - 4, 211); }
-FillRound("#3CC4A8", tx, 292, 90, 6, 3);
-using (var f = F(16)) { using var b = B("#D9ECF2"); g.DrawString(o["tagline"], f, b, tx, 308); }
+var tight = StringFormat.GenericTypographic;
+using (var f = F(54, FontStyle.Bold))
+{
+    using var b = B(NAVY);
+    g.DrawString(o["title"], f, b, tx, 146, tight);
+}
+using (var f = F(54, FontStyle.Bold))
+{
+    using var b = B(TEAL);
+    g.DrawString(o["year"], f, b, tx, 211, tight);
+    float yearW = g.MeasureString(o["year"], f, PointF.Empty, tight).Width;
+    FillRound(SAND, tx, 277, yearW, 6, 3);            // underline spans the whole year
+}
+using (var f = F(16)) { using var b = B(MUTED); g.DrawString(o["tagline"], f, b, tx, 304, tight); }
 
-// ---- footer band: version (left) + copyright (right) ----
+// footer band: version (left) + copyright (right)
 const float bandTop = H - 64, bandH = 50;
-using (var b = B("#082B42")) g.FillRectangle(b, 0, bandTop, W, bandH);
-using (var b = B("#3CC4A8")) g.FillRectangle(b, 0, H - 14, W, 14);
-using (var b = B("#F6C85F")) g.FillRectangle(b, 0, H - 14, W * .33f, 14);
-using (var b = B("#FF6B6B")) g.FillRectangle(b, W * .33f, H - 14, W * .22f, 14);
+using (var b = B(BAND)) g.FillRectangle(b, 0, bandTop, W, bandH);
+using (var b = B(MINT)) g.FillRectangle(b, 0, H - 14, W, 14);
+using (var b = B(SAND)) g.FillRectangle(b, 0, H - 14, W * .33f, 14);
+using (var b = B(CORAL)) g.FillRectangle(b, W * .33f, H - 14, W * .22f, 14);
 
 var mid = new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center };
 var midRight = new StringFormat { Alignment = StringAlignment.Far, LineAlignment = StringAlignment.Center };
 
-// version pill
 string verText = $"Version {o["version"]}";
 using (var f = F(14, FontStyle.Bold))
 {
     float pw = g.MeasureString(verText, f).Width + 10, ph = 28, px = 30, py = bandTop + (bandH - ph) / 2;
-    FillRound("#3CC4A8", px, py, pw, ph, ph / 2);
-    using var b = B("#0B3C5D");
+    FillRound(TEAL, px, py, pw, ph, ph / 2);
+    using var b = B("#FFFFFF");
     g.DrawString(verText, f, b, new RectangleF(px, py, pw, ph), mid);
 }
 
-// copyright
 string copyText = $"© {o["copyrightYear"]} {o["company"]}. All rights reserved.";
-using (var f = F(13)) { using var b = B("#D9ECF2"); g.DrawString(copyText, f, b, new RectangleF(0, bandTop, W - 30, bandH), midRight); }
+using (var f = F(13)) { using var b = B(MUTED); g.DrawString(copyText, f, b, new RectangleF(0, bandTop, W - 30, bandH), midRight); }
 
 Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(o["out"]))!);
 bmp.Save(o["out"], ImageFormat.Png);
-Console.WriteLine("saved " + o["out"]);
+Console.WriteLine("saved "+ o["out"]);
