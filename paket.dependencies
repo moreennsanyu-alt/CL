@@ -57,7 +57,7 @@ nuget Microsoft.VisualBasic 10.3.0
 nuget Microsoft.Windows.Compatibility 11.0.0
 nuget System.Collections.Immutable 11.0.0
 nuget System.Diagnostics.DiagnosticSource 11.0.0
-nuget System.IdentityModel.Tokens.Jwt 8.16.0
+nuget System.IdentityModel.Tokens.Jwt 8.23.0
 nuget System.Memory 4.6.3
 nuget System.Net.Http 4.3.4
 nuget System.Reflection.Metadata 11.0.0
