@@ -139,7 +139,7 @@ nuget Moq 4.21.0
 nuget FluentAssertions 8.5.0
 nuget Shouldly 4.3.0
 nuget Respawn 7.0.0
-nuget Verify 33.3.4
+nuget Verify 33.4.0
 nuget Verify.XunitV3 33.4.0
 nuget DiffEngine 20.9.0
 nuget Argon 0.38.2
