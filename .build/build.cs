@@ -128,7 +128,7 @@ class Build : FalloutBuild
 	
     Target Compile => _ => _
         .DependsOn(Restore)
-		//.DependsOn(InjectLicenseKey)
+		.DependsOn(InjectLicenseKey)
         .Executes(() =>
         {
             var configurations = new List<string>();
