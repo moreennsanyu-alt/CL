@@ -1,7 +1,8 @@
 xunit.v3
 Xunit.DependencyInjection
-NetEvolve.Extensions.XUnit.V3
+Xunit.OpenCategories.V3
 Microsoft.Testing.Extensions.CodeCoverage
+Microsoft.Testing.Extensions.HtmlReport
 Shouldly
 FlaUI.Core.Signed
 FlaUI.UIA3.Signed
