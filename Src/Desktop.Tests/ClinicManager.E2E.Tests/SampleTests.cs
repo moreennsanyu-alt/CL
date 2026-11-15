@@ -1,4 +1,4 @@
-
+2
 using Xunit.Sdk;
 using Xunit;
 
@@ -36,7 +36,7 @@ public class CalculatorTests
 
     #region CombinatorialTwoParameters
     [Theory, CombinatorialData]
-    public void CheckValidAge(
+    public void CheckValidAge3(
         [CombinatorialValues(5, 18, 21, 25)] int age,
         bool friendlyOfficer)
     {
