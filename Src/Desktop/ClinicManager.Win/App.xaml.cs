@@ -48,6 +48,9 @@ public partial class App : PrismApplication
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
+        containerRegistry.RegisterSingleton<ILocalStorageService, LocalStorageService>();
+        containerRegistry.RegisterSingleton<IAuthService, AuthService>();
+        
         // Windows
         containerRegistry.Register<LoginView>();
         containerRegistry.Register<ShellWindow>();
