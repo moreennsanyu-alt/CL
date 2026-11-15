@@ -66,5 +66,4 @@ global using Humanizer;
 // Serilog: namespace is NOT imported globally because Serilog.ILogger
 // clashes with Microsoft.Extensions.Logging.ILogger. Use aliases instead.
 global using SerilogLog = Serilog.Log;
-global using SerilogLogger = Seril
-og.ILogger;
+global using SerilogLogger = Serilog.ILogger;
