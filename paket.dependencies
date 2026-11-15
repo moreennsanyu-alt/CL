@@ -122,11 +122,15 @@ nuget OpenTelemetry.Instrumentation.Runtime 1.21.0
 nuget xunit.v3 4.0.3
 nuget xunit.v3.extensibility.core 4.0.3
 nuget Xunit.DependencyInjection 12.0.1
-nuget NetEvolve.Extensions.XUnit.V3 3.5.658
+nuget Xunit.Combinatorial 2.2.3-alpha
+nuget Xunit.OpenCategories.V3 2.4.1.138-beta 
+
 nuget Microsoft.TestPlatform.ObjectModel 18.8.1
 nuget Microsoft.Testing.Platform 2.5.3
 nuget Microsoft.Testing.Platform.MSBuild 2.5.3
 nuget Microsoft.Testing.Extensions.CodeCoverage 18.12.0
+nuget Microsoft.Testing.Extensions.VideoRecorder 1.0.0-alpha.26561.10
+nuget Microsoft.Testing.Extensions.HtmlReport 2.5.3
 nuget NSubstitute 6.2.0
 nuget NSubstitute.Analyzers.CSharp 1.0.17
 nuget EntityFrameworkCore.Testing.NSubstitute 11.0.0-rc01
@@ -136,6 +140,7 @@ nuget FluentAssertions 8.5.0
 nuget Shouldly 4.3.0
 nuget Respawn 7.0.0
 nuget Verify 33.3.4
+nuget Verify.XunitV3 33.4.0
 nuget DiffEngine 20.9.0
 nuget Argon 0.38.2
 nuget SimpleInfoName 3.2.1
