@@ -30,7 +30,6 @@ global using ServiceStack.Text;
 
 // Prism (v9 namespaces)
 global using Prism.Commands;
-global using Prism.Dialogs;
 global using Prism.DryIoc;
 global using Prism.Events;
 global using Prism.Ioc;
