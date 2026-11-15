@@ -18,7 +18,6 @@
     <Constant Include="BuildInfo.InstallerDir" Value="$(InstallersPath)" />
     <Constant Include="BuildInfo.DesktopPublishDir" Value="$(DesktopPublishDir)" />
   </ItemGroup>
-  <ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.Windows.Forms" />
