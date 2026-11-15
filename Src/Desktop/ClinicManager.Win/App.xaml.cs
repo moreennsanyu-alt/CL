@@ -94,7 +94,7 @@ public partial class App : PrismApplication
     // App.xaml.cs
     protected override void ConfigureModuleCatalog(IModuleCatalog catalog)
     {
-        var moduleTypes = typeof(CMApplication).Assembly
+        var moduleTypes = typeof(App).Assembly
             .GetTypes()
             .Where(t => typeof(IModule).IsAssignableFrom(t)
                     && t is { IsAbstract: false, IsInterface: false });
