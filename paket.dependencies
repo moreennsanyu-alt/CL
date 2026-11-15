@@ -26,6 +26,7 @@ nuget Microsoft.Extensions.Logging 11.0.0
 nuget Microsoft.Extensions.Logging.Abstractions 11.0.0
 nuget Microsoft.Extensions.Logging.Console 11.0.0
 nuget Microsoft.Extensions.Options 11.0.0
+nuget Microsoft.Extensions.Options.DataAnnotations 11.0.0
 nuget Microsoft.Extensions.Primitives 11.0.0
 nuget Microsoft.Extensions.Resilience 11.0.0
 nuget Microsoft.Extensions.ApiDescription.Server 11.0.0

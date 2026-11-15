@@ -16,6 +16,7 @@ Microsoft.Extensions.Logging.Console
 Microsoft.Extensions.Logging.Debug
 Microsoft.Extensions.Options
 Microsoft.Extensions.Options.ConfigurationExtensions
+Microsoft.Extensions.Options.DataAnnotations
 Microsoft.Extensions.Primitives
 Microsoft.Extensions.Resilience
 Microsoft.Bcl.AsyncInterfaces

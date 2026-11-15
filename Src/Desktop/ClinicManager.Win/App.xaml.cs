@@ -31,6 +31,14 @@ public partial class App : PrismApplication
 
     private static void ConfigureServices(IServiceCollection services)
     {
+        services.AddCmConfig(c =>
+        {
+            c.ApplicationName = "MyApp";
+            c.Environment = "Staging";
+            c.Port = 9092;
+            c.EnableLogging = false;
+            c.ConnectionString = "Server=...;";
+        });
         services.AddHttpClient<IApiClient, ApiClient>(client =>
         {
             client.BaseAddress = new Uri("https://localhost:5001/");
