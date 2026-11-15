@@ -7,7 +7,7 @@ public class CalculatorTests
 {
     #region PairwiseThreeParameters
     [Theory, PairwiseData]
-    public void CheckValidAge(bool p1, bool p2, bool p3)
+    public void CheckValidAge1(bool p1, bool p2, bool p3)
     {
         // Pairwise generates these 4 test cases:
         // false false false
@@ -19,7 +19,7 @@ public class CalculatorTests
         
     #region CombinatorialThreeParameters
     [Theory, CombinatorialData]
-    public void CheckValidAge(bool p1, bool p2, bool p3)
+    public void CheckValidAge2(bool p1, bool p2, bool p3)
     {
         // Combinatorial generates these 8 test cases:
         // false false false
