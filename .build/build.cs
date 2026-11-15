@@ -91,26 +91,14 @@ class Build : FalloutBuild
             InstallersDirectory.CreateOrCleanDirectory();
             BuildLogsDirectory.CreateOrCleanDirectory();
        });
-        
-    Target RestoreTools => _ => _
-        .DependsOn(Clean)
-        .Executes(() =>
-        {
-            DotNet("tool restore");
-            
-            DotNet("wix extension add -g WixToolset.UI.wixext/6.0.2");
-            
-        });
-        
+    
     Target Restore => _ => _
         .DependsOn(Clean)
-        .DependsOn(RestoreTools)
         .Executes(() =>
         {
 			
             DotNetRestore(s => s
                     .SetProjectFile(Solution)
-                    .SetConfigFile(RootDirectory / "nuget.config")
                     .EnableNoCache());
 	
         });
