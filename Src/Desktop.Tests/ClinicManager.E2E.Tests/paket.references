@@ -7,3 +7,4 @@ Shouldly
 FlaUI.Core.Signed
 FlaUI.UIA3.Signed
 FlaUI.TestUtilities
+ThisAssembly.Constants
