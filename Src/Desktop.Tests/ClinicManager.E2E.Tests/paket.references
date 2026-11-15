@@ -8,5 +8,4 @@ FlaUI.Core.Signed
 FlaUI.UIA3.Signed
 FlaUI.TestUtilities
 ThisAssembly.Constants
-Xunit.DependencyInjection
 Xunit.Combinatorial
