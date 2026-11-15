@@ -68,6 +68,7 @@ jobs:
             artifacts/attachments/testresults/**/*.gif
             artifacts/attachments/testresults/**/*.bmp
             artifacts/attachments/testresults/**/*.avi
+            artifacts/attachments/testresults/**/*.html
           if-no-files-found: ignore
         
     
