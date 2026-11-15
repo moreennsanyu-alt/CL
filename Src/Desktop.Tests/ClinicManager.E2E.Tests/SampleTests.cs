@@ -1,4 +1,3 @@
-2
 using Xunit.Sdk;
 using Xunit;
 
