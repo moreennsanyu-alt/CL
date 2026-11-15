@@ -1,0 +1,16 @@
+<UserControl x:Class="ClinicManager.Win.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:controls="clr-namespace:ClinicManager.Win.Presentation.Controls"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             AutomationProperties.AutomationId="DashboardView">
+    <Grid Margin="16">
+        <controls:CardPanel x:Name="TodayCard" AutomationProperties.AutomationId="TodayCard"
+                            Header="Today" Width="320" Height="160"
+                            HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock x:Name="TodaySummaryText" AutomationProperties.AutomationId="TodaySummaryText"
+                       Text="No appointments yet." />
+        </controls:CardPanel>
+    </Grid>
+</UserControl>
