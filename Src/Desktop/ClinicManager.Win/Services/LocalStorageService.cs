@@ -23,7 +23,7 @@ public sealed class LocalStorageService : ILocalStorageService
 
         _folder = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-            config.AppName, "storage");
+            config.ApplicationName, "storage");
 
         _entropy = string.IsNullOrEmpty(config.StorageEntropy)
             ? null
