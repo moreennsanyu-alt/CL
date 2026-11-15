@@ -66,3 +66,5 @@ global using Humanizer;
 // clashes with Microsoft.Extensions.Logging.ILogger. Use aliases instead.
 global using SerilogLog = Serilog.Log;
 global using SerilogLogger = Serilog.ILogger;
+
+global using ClinicManager.Win.Configuration;
