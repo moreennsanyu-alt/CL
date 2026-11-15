@@ -52,7 +52,7 @@ nuget Microsoft.EntityFrameworkCore.Tools 11.0.0
 
 // ---- BCL / System ----
 nuget Microsoft.Bcl.AsyncInterfaces 11.0.0
-nuget Microsoft.CodeAnalysis 5.0.0
+nuget Microsoft.CodeAnalysis 5.12.0
 nuget Microsoft.VisualBasic 10.3.0
 nuget Microsoft.Windows.Compatibility 11.0.0
 nuget System.Collections.Immutable 11.0.0
