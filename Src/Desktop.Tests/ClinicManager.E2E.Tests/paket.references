@@ -1,0 +1,8 @@
+xunit.v3
+Xunit.DependencyInjection
+NetEvolve.Extensions.XUnit.V3
+Microsoft.Testing.Extensions.CodeCoverage
+Shouldly
+FlaUI.Core.Signed
+FlaUI.UIA3.Signed
+FlaUI.TestUtilities
