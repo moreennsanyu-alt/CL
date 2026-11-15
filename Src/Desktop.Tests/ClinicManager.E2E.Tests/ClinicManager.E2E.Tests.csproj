@@ -5,4 +5,15 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
+  <ItemGroup>
+  <PackageReference Include="xunit.v3" />
+  <PackageReference Include="Xunit.DependencyInjection" />
+  <PackageReference Include="NetEvolve.Extensions.XUnit.V3" />
+  <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+  <PackageReference Include="Shouldly" />
+  <PackageReference Include="FlaUI.Core.Signed" />
+  <PackageReference Include="FlaUI.UIA2.Signed" />
+  <PackageReference Include="FlaUI.UIA3.Signed" />
+  <PackageReference Include="FlaUI.TestUtilities" />
+</ItemGroup>
 </Project>
