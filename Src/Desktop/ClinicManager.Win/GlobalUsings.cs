@@ -65,3 +65,4 @@ global using SerilogLog = Serilog.Log;
 global using SerilogLogger = Serilog.ILogger;
 
 global using ClinicManager.Win.Configuration;
+global using ClinicManager.Win.Services;
