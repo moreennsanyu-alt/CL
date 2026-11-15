@@ -179,7 +179,9 @@ class Build : FalloutBuild
 							"--coverage",
 							"--coverage-output-format cobertura",
 							$"--coverage-output {CoverageDirectory / $"{v.project.Name}_{v.framework}.cobertura.xml"}",
-                            $"--results-directory {TestResultsDirectory}"
+                            $"--results-directory {TestResultsDirectory}",
+							"--report-html",
+							$"--report-html-filename {v.project.Name}_{v.framework}.html"
                          )
                     )
                 );
