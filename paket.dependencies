@@ -74,7 +74,6 @@ nuget Microsoft.Build.Utilities.Core 18.12.2
 
 // ---- ServiceStack ----
 nuget ServiceStack 10.5.0
-nuget ServiceStack.Admin 10.5.0
 nuget ServiceStack.Api.OpenApi 10.5.0
 nuget ServiceStack.Client 10.5.0
 nuget ServiceStack.Common 10.5.0
