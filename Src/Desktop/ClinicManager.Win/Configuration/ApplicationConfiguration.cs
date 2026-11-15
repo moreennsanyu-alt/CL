@@ -20,4 +20,7 @@ public class ApplicationConfiguration
     public bool EnableLogging { get; set; } = true;
 
     public string? ConnectionString { get; set; }
+
+    public string? StorageEntropy { get; set; }
+    
 }
