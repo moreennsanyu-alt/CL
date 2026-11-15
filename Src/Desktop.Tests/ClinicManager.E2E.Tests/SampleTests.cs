@@ -105,25 +105,7 @@ public class CalculatorTests
     }
     #endregion
 
-    #region GeneratedByProperty
-    public static IEnumerable<int> IntPropertyValues
-    {
-        get
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                yield return Random.Shared.Next();
-            }
-        }
-    }
-
-    [Theory, CombinatorialData]
-    public void CombinatorialMemberDataFromProperties(
-        [CombinatorialMemberData(nameof(IntPropertyValues))] int p1)
-    {
-        Assert.True(true);
-    }
-    #endregion
+   
 
     #region GeneratedByField
     public static readonly IEnumerable<int> IntFieldValues =
