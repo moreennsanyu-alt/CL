@@ -8,7 +8,7 @@
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <StackPanel Margin="24" VerticalAlignment="Center">
         <TextBlock x:Name="LoginTitleText" AutomationProperties.AutomationId="LoginTitleText"
-                   Style="{StaticResource HeadingTextStyle}" Text="Clinic Manager" Margin="0,0,0,16" />
+                   Text="Clinic Manager" Margin="0,0,0,16" />
         <TextBox x:Name="UsernameTextBox" AutomationProperties.AutomationId="UsernameTextBox"
                  Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8" />
         <PasswordBox x:Name="PasswordBox" AutomationProperties.AutomationId="PasswordBox" Margin="0,0,0,16" />
