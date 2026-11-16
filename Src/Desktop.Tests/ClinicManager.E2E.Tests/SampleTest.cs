@@ -7,7 +7,9 @@ namespace ClinicManager.E2E.Tests
         [Fact]
         public void TestMethodName()
         {
-            var shellWindow = GetShellWindow();
+            var loginWindow = GetLoginWindow();
+            loginWindow.LoginButton.Click();
+            
             //shellWindow.SendButton.Click();
            // Thread.Sleep(TimeSpan.FromSeconds(20));
             var path = TakeScreenShot("hello1");
