@@ -11,7 +11,6 @@
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:dockablz="clr-namespace:Dragablz.Dockablz;assembly=Dragablz"
         xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
-        xmlns:mahMaterialDragablzMashUp="clr-namespace:MahMaterialDragablzMashUp"
         xmlns:wpf="http://materialdesigninxaml.net/winfx/xaml/themes"
         FontFamily="{DynamicResource MahApps.Fonts.Family.Window.Title}"
         GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
