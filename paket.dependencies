@@ -184,3 +184,11 @@ nuget QuestPDF 2026.9.2
 nuget Verify.QuestPDF 3.1.0
 nuget SQLite3MC.PCLRaw.bundle 2.7.0
 nuget WixSharp_wix4 2.14.2
+
+
+nuget MaterialDesignColors 5.4.0
+nuget Dragablz 0.0.3.234
+nuget MaterialDesignThemes.MahApps 5.4.0
+nuget MahApps.Metro 2.4.11
+nuget MaterialDesignThemes 5.4.0
+nuget ControlzEx 5.0.0 
