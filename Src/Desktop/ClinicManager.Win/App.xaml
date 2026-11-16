@@ -25,10 +25,12 @@
                 <!-- Dragablz Material Design -->
                 <ResourceDictionary Source="pack://application:,,,/Dragablz;component/Themes/materialdesign.xaml" />
                 
-                <!-- Dragablz Material Design -->
-                <Style TargetType="{x:Type dragablz:TabablzControl}" BasedOn="{StaticResource MaterialDesignTabablzControlStyle}" />
-      
+
             </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Dragablz Material Design -->
+            <Style TargetType="{x:Type dragablz:TabablzControl}" BasedOn="{StaticResource MaterialDesignTabablzControlStyle}" />
+      
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>
