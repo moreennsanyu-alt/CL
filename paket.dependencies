@@ -51,9 +51,7 @@ nuget Microsoft.EntityFrameworkCore.Design 11.0.0
 nuget Microsoft.EntityFrameworkCore.Relational 11.0.0
 nuget Microsoft.EntityFrameworkCore.Sqlite 11.0.0
 nuget Microsoft.EntityFrameworkCore.Sqlite.Core 11.0.0
-nuget Microsoft.EntityFrameworkCore.SqlServer 11.0.0
 nuget Microsoft.EntityFrameworkCore.Tools 11.0.0
-nuget Microsoft.Data.SqlClient 6.1.4
 nuget Npgsql.EntityFrameworkCore.PostgreSQL 10.0.0
 
 // ---- BCL / System ----
@@ -132,15 +130,12 @@ nuget Xunit.DependencyInjection 12.0.1
 nuget Xunit.Combinatorial 2.2.3-alpha
 nuget Xunit.OpenCategories.V3 2.4.1.138-beta
 
-nuget nunit 4.5.0
-nuget NUnit.Analyzers 4.11.2
-nuget NUnit3TestAdapter 6.1.0
+nuget nunit 5.0.0
+nuget NUnit.Analyzers 4.15.0
+nuget NUnit3TestAdapter 6.3.1
 nuget Microsoft.NET.Test.Sdk 18.3.0
-nuget coverlet.collector 8.0.0
+nuget coverlet.MTP 10.1.1
 nuget Reqnroll.NUnit 3.3.3
-nuget Microsoft.Playwright 1.58.0
-nuget Testcontainers.PostgreSql 4.8.1
-nuget Testcontainers.MsSql 4.8.1
 
 nuget Microsoft.TestPlatform.ObjectModel 18.8.1
 nuget Microsoft.Testing.Platform 2.5.3
