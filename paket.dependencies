@@ -52,7 +52,6 @@ nuget Microsoft.EntityFrameworkCore.Relational 11.0.0
 nuget Microsoft.EntityFrameworkCore.Sqlite 11.0.0
 nuget Microsoft.EntityFrameworkCore.Sqlite.Core 11.0.0
 nuget Microsoft.EntityFrameworkCore.Tools 11.0.0
-nuget Npgsql.EntityFrameworkCore.PostgreSQL 10.0.0
 
 // ---- BCL / System ----
 nuget Microsoft.Bcl.AsyncInterfaces 11.0.0
