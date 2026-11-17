@@ -136,7 +136,7 @@ nuget Microsoft.NET.Test.Sdk 18.3.0
 nuget coverlet.MTP 10.1.1
 nuget Reqnroll.NUnit 3.3.3
 
-nuget Microsoft.TestPlatform.ObjectModel 18.8.1
+nuget Microsoft.TestPlatform.ObjectModel 18.12.0
 nuget Microsoft.Testing.Platform 2.5.3
 nuget Microsoft.Testing.Platform.MSBuild 2.5.3
 nuget Microsoft.Testing.Extensions.CodeCoverage 18.12.0
