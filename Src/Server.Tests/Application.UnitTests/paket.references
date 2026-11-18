@@ -10,3 +10,4 @@ AutoMapper
 Microsoft.Testing.Extensions.CodeCoverage
 Microsoft.Testing.Extensions.HtmlReport
 Microsoft.Extensions.Logging
+Microsoft.Extensions.Logging.Debug
