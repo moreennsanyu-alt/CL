@@ -11,8 +11,6 @@ Azure.Identity
 Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 Microsoft.AspNetCore.Identity.EntityFrameworkCore
 Microsoft.AspNetCore.OpenApi
-Microsoft.AspNetCore.SpaProxy
-Microsoft.Extensions.ApiDescription.Server
 Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore
 Microsoft.EntityFrameworkCore.Design
 Scalar.AspNetCore
