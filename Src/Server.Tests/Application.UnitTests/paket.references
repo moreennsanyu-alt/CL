@@ -7,3 +7,5 @@ Shouldly
 coverlet.MTP
 FluentValidation.DependencyInjectionExtensions
 AutoMapper
+Microsoft.Testing.Extensions.CodeCoverage
+Microsoft.Testing.Extensions.HtmlReport

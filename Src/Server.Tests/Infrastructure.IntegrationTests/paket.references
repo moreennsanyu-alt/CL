@@ -2,3 +2,5 @@ coverlet.MTP
 NUnit
 NUnit3TestAdapter
 NUnit.Analyzers
+Microsoft.Testing.Extensions.CodeCoverage
+Microsoft.Testing.Extensions.HtmlReport
