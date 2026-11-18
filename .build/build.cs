@@ -197,8 +197,12 @@ class Build : FalloutBuild
                                            "Application.FunctionalTests",
                                            "Domain.UnitTests",
                                            "Application.UnitTests",
-                                           "Infrastructure.IntergrationTests",        
+                                           "Infrastructure.IntegrationTests",
             };
+
+			    testProjectNames.ForEach(x=>Information(x.Name));
+
+           
 
             var unitTestProjects = testProjectNames.Select(x => Solution.GetAllProjects(x).First());
          
