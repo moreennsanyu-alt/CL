@@ -191,7 +191,6 @@ nuget MimeKit 5.0.0
 nuget Scalar.AspNetCore 2.21.0
 nuget QuestPDF 2026.9.2
 nuget Verify.QuestPDF 3.1.0
-nuget SQLite3MC.PCLRaw.bundle 2.7.0
 nuget WixSharp_wix4 2.14.2
 
 // ---- Material Design / MahApps ----
