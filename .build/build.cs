@@ -194,10 +194,10 @@ class Build : FalloutBuild
         .Executes(() =>
         {
             var testProjectNames = new[] { "ClinicManager.Win.Tests",
-                                           //"Application.FunctionalTests",
-                                           //"Domain.UnitTests",
-                                           //"Application.UnitTests",
-                                           //"Infrastructure.IntergrationTests",        
+                                           "Application.FunctionalTests",
+                                           "Domain.UnitTests",
+                                           "Application.UnitTests",
+                                           "Infrastructure.IntergrationTests",        
             };
 
             var unitTestProjects = testProjectNames.Select(x => Solution.GetAllProjects(x).First());
