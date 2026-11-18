@@ -14,9 +14,9 @@ namespace ClinicManager.E2E.Tests
            Thread.Sleep(TimeSpan.FromSeconds(20));
             var path = TakeScreenShot("hello1");
             TestContext.Current.AddAttachment(
-                            "hello1.png",
-                            File.ReadAllBytes(path),
-                            "image/png");
+                           name: "hello1.png",
+                           value: File.ReadAllBytes(path),
+                           mediaType: "image/png");
             throw new NotImplementedException();
         }
 
