@@ -2,3 +2,5 @@ Microsoft.EntityFrameworkCore
 Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 Microsoft.AspNetCore.Identity.EntityFrameworkCore
 Microsoft.EntityFrameworkCore.Sqlite
+MediatR
+Ardalis.GuardClauses
