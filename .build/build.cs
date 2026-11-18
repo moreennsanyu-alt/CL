@@ -208,7 +208,7 @@ class Build : FalloutBuild
                 from framework in frameworks
                 select new { project, framework };
 
-               // E2ETestProjects.ForEach(x=>Information(x.Name));
+               unitTestProjects.ForEach(x=>Information(x.Name));
 
             DotNetRun(s => s
                 .SetConfiguration(Configuration.Debug)
