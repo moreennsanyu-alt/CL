@@ -16,3 +16,4 @@ Microsoft.Extensions.ApiDescription.Server
 Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore
 Microsoft.EntityFrameworkCore.Design
 Scalar.AspNetCore
+MediatR

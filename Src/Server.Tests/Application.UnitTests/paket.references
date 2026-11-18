@@ -5,3 +5,5 @@ NUnit3TestAdapter
 Moq
 Shouldly
 coverlet.MTP
+FluentValidation.DependencyInjectionExtensions
+AutoMapper
