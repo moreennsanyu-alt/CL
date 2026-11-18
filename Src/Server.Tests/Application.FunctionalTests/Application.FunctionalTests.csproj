@@ -16,7 +16,7 @@
   </ItemGroup>
   <!--#endif-->
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Web\Web.csproj" />
+    <ProjectReference Include="..\..\Src\Server\Web\Web.csproj" />
   </ItemGroup>
   <Import Project="..\..\..\.paket\Paket.Restore.targets" />
 </Project>
