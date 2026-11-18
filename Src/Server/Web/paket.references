@@ -17,3 +17,4 @@ Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore
 Microsoft.EntityFrameworkCore.Design
 Scalar.AspNetCore
 MediatR
+Ardalis.GuardClauses
