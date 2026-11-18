@@ -1,5 +1,5 @@
 ﻿using ClinicManager.Domain.Exceptions;
-using CleanArchitecture.Domain.ValueObjects;
+using ClinicManager.Domain.ValueObjects;
 using NUnit.Framework;
 using Shouldly;
 

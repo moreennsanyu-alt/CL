@@ -2,7 +2,7 @@
 
 using ClinicManager.Application.Common.Interfaces;
 
-namespace CleanArchitecture.Web.Services;
+namespace ClinicManager.Web.Services;
 
 public class CurrentUser : IUser
 {
