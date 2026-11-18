@@ -126,7 +126,7 @@ namespace ClinicManager.E2E.Tests.Core
                         TestContext.Current.AddAttachment(
                             _testDisplayName,
                             File.ReadAllBytes(path),
-                            ".png");
+                            "image/png");
                     }
                     catch (Exception ex)
                     {
