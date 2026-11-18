@@ -16,3 +16,4 @@ Microsoft.EntityFrameworkCore.Sqlite.Core
 MediatR
 Ardalis.GuardClauses
 SQLite3MC.PCLRaw.bundle
+AutoMapper
