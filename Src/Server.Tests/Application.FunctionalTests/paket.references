@@ -9,3 +9,10 @@ Shouldly
 coverlet.MTP
 Microsoft.Testing.Extensions.CodeCoverage
 Microsoft.Testing.Extensions.HtmlReport
+Microsoft.EntityFrameworkCore
+Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Sqlite.Core
+MediatR
+Ardalis.GuardClauses
+SQLite3MC.PCLRaw.bundle
