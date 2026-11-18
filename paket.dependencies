@@ -45,14 +45,13 @@ nuget Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 11.0.0
 nuget Microsoft.AspNetCore.Identity.EntityFrameworkCore 11.0.0
 nuget Microsoft.AspNetCore.Mvc.Testing 11.0.0
 nuget Microsoft.AspNetCore.OpenApi 11.0.0
-nuget Microsoft.AspNetCore.SpaProxy 11.0.0
 nuget Microsoft.EntityFrameworkCore 11.0.0
 nuget Microsoft.EntityFrameworkCore.Design 11.0.0
 nuget Microsoft.EntityFrameworkCore.Relational 11.0.0
 nuget Microsoft.EntityFrameworkCore.Sqlite 11.0.0
 nuget Microsoft.EntityFrameworkCore.Sqlite.Core 11.0.0
 nuget Microsoft.EntityFrameworkCore.Tools 11.0.0
-
+nuget SQLite3MC.PCLRaw.bundle 2.7.1
 // ---- BCL / System ----
 nuget Microsoft.Bcl.AsyncInterfaces 11.0.0
 nuget Microsoft.CodeAnalysis 5.12.0
