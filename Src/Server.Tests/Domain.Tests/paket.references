@@ -1,0 +1,5 @@
+coverlet.MTP
+NUnit
+NUnit3TestAdapter
+NUnit.Analyzers
+Shouldly
