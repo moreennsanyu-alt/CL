@@ -5,8 +5,8 @@
     <AssemblyName>ClinicManager.Application.UnitTests</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\Server\Application\Application.csproj" />
-    <ProjectReference Include="..\..\Src\Server\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Server\Application\Application.csproj" />
+    <ProjectReference Include="..\..\Server\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
   <Import Project="..\..\..\.paket\Paket.Restore.targets" />
 </Project>
