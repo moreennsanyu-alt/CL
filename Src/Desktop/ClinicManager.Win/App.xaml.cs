@@ -11,6 +11,7 @@ using Prism.Ioc;
 using Prism.Regions;
 using System.Runtime.CompilerServices;
 using System.Windows.Media;
+using DevExpress.Xpf.Core;
 
 namespace ClinicManager.Win;
 
