@@ -8,5 +8,37 @@
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
-  <Import Project="..\..\..\.paket\Paket.Restore.targets" />
+
+<ItemGroup>
+  <!-- Resilience / Service discovery / OpenTelemetry -->
+  <PackageReference Include="Microsoft.Extensions.Http.Resilience" />
+  <PackageReference Include="Microsoft.Extensions.ServiceDiscovery" />
+  <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
+  <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
+  <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
+  <PackageReference Include="OpenTelemetry.Instrumentation.Http" />
+  <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" />
+</ItemGroup>
+
+<ItemGroup>
+  <!-- Azure -->
+  <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" />
+  <PackageReference Include="Azure.Identity" />
+</ItemGroup>
+
+<ItemGroup>
+  <!-- ASP.NET Core / EF Core -->
+  <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" />
+  <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+  <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+  <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" PrivateAssets="all" />
+  <PackageReference Include="Scalar.AspNetCore" />
+</ItemGroup>
+
+<ItemGroup>
+  <!-- Libraries -->
+  <PackageReference Include="MediatR" />
+  <PackageReference Include="Ardalis.GuardClauses" />
+</ItemGroup>
 </Project>
