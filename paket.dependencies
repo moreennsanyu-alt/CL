@@ -237,11 +237,3 @@ nuget DevExpress.Wpf.Themes.Win11Light 24.2.15
 nuget DevExpress.Wpf.Themes.Win11Dark 24.2.15
 
 
-
-nuget WpfAnalyzers 4.1.1
-nuget Microsoft.VisualStudio.Threading.Analyzers 18.7.23
-nuget EnumerableAsyncProcessor 4.0.0
-nuget AsyncAwaitBestPractices 10.0.0
-nuget AsyncAwaitBestPractices.MVVM 10.0.0
-nuget AsyncKeyedLock 8.1.2
-nuget AsyncFixer 2.1.0
