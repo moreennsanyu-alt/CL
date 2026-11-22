@@ -39,8 +39,7 @@ jobs:
           if (!(Test-Path $outputDir)) { New-Item -ItemType Directory -Path $outputDir }
 
           # Access the environment variable using $env:
-          & 7z x "$packageName" -p"$env:ZIP_PWD" "-o$outputDir" 
-          -y
+          & 7z x "$packageName" -p"$env:ZIP_PWD" "-o$outputDir" -y
     
       - name: Run Paket Update
         id: paket
