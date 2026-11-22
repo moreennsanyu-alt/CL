@@ -6,26 +6,12 @@
     <UseWPF>true</UseWPF>
     <AssemblyName>ClinicMgr</AssemblyName>
   </PropertyGroup>
-  
-    <ItemGroup>
-        <SplashScreen Include="Assets\splash.png" />
-    </ItemGroup>
 
 <ItemGroup>
   <None Update="appsettings.json">
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </None>
 </ItemGroup>
-
-<Target Name="GenSplash" BeforeTargets="BeforeBuild">
-  <PropertyGroup>
-    <SplashVersion Condition="'$(Version)' == ''">1.0</SplashVersion>
-    <SplashVersion Condition="'$(Version)' != ''">$(Version)</SplashVersion>
-    <SplashYear>$([System.DateTime]::Now.Year)</SplashYear>
-  </PropertyGroup>
-  
-  <Exec Command="dotnet run --project ../../../tools/SplashGen/SplashGen.csproj -c Release -- --year $(SplashYear) --version $(SplashVersion) --out &quot;$(MSBuildProjectDirectory)\Assets\splash.png&quot;" />
-</Target>
 
   <Import Project="..\..\..\.paket\Paket.Restore.targets" />
 </Project>
