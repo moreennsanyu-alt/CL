@@ -84,18 +84,7 @@ DevExpress.Mvvm
 DevExpress.Mvvm.CodeGenerators
 DevExpress.Wpf.ThemesLW
 
-ThisAssembly.Constants
-System.Text.RegularExpressions
-
-Microsoft.Extensions.Http.Resilience
-
 MailKit
 MimeKit
-
-EnumerableAsyncProcessor
-AsyncAwaitBestPractices
-AsyncAwaitBestPractices.MVVM
-AsyncKeyedLock
-AsyncFixer
 
 Nerdbank.GitVersioning
