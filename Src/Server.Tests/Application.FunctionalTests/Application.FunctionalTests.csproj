@@ -21,5 +21,59 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Server\Web\Web.csproj" />
   </ItemGroup>
-  <Import Project="..\..\..\.paket\Paket.Restore.targets" />
+
+
+  <ItemGroup>
+  <!-- Testing -->
+  <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+  <PackageReference Include="nunit" />
+  <PackageReference Include="NUnit.Analyzers" PrivateAssets="all" />
+  <PackageReference Include="NUnit3TestAdapter" />
+  <PackageReference Include="Moq" />
+  <PackageReference Include="Respawn" />
+  <PackageReference Include="Shouldly" />
+  <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+  <PackageReference Include="Microsoft.Testing.Extensions.HtmlReport" />
+</ItemGroup>
+
+<ItemGroup>
+  <!-- Auth / Identity -->
+  <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+  <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+</ItemGroup>
+
+<ItemGroup>
+  <!-- EF Core / SQLite -->
+  <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" />
+  <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" />
+  <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" />
+  <PackageReference Include="SQLite3MC.PCLRaw.bundle" />
+</ItemGroup>
+
+<ItemGroup>
+  <!-- Libraries -->
+  <PackageReference Include="MediatR" />
+  <PackageReference Include="MediatR.Contracts" />
+  <PackageReference Include="Ardalis.GuardClauses" />
+  <PackageReference Include="AutoMapper" />
+  <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+  <PackageReference Include="Scalar.AspNetCore" />
+</ItemGroup>
+
+<ItemGroup>
+  <!-- Resilience / OpenTelemetry -->
+  <PackageReference Include="Microsoft.Extensions.Http.Resilience" />
+  <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
+  <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
+  <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
+  <PackageReference Include="OpenTelemetry.Instrumentation.Http" />
+  <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" />
+</ItemGroup>
+
+<ItemGroup>
+  <!-- Azure -->
+  <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" />
+  <PackageReference Include="Azure.Identity" />
+</ItemGroup>
 </Project>
