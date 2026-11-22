@@ -80,7 +80,7 @@
   <PackageReference Include="Serilog" />
   <PackageReference Include="Humanizer.Core" />
   <PackageReference Include="Utf8StringInterpolation" />
-  <PackageReference Include="ThisAssembly.Constants" PrivateAssets="all" />
+  
 </ItemGroup>
 
 <ItemGroup>
@@ -122,8 +122,4 @@
   <PackageReference Include="MimeKit" />
 </ItemGroup>
 
-<ItemGroup>
-  <!-- Versioning -->
-  <PackageReference Include="Nerdbank.GitVersioning" PrivateAssets="all" />
-</ItemGroup>
 </Project>
