@@ -16,9 +16,19 @@ namespace ClinicManager.Win;
 
 public partial class App : PrismApplication
 {
+    static App()
+    {
+       SetupThemes();  
+    }
+
+    static void SetupThemes()
+    { 
+         ApplicationThemeHelper.ApplicationThemeName = Theme.Win11Light;
+    }
     
     protected override void OnStartup(StartupEventArgs e)
     {
+    
         base.OnStartup(e);
     }
 
