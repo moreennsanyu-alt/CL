@@ -1,4 +1,4 @@
-STORAGE: PACKAGES
+STORAGE: NONE
 STRATEGY: MIN
 LOWEST_MATCHING: TRUE
 COPY-LOCAL: TRUE
@@ -1720,7 +1720,7 @@ NUGET
     xunit.v3.runner.inproc.console (4.0.3) - restriction: || (== net10.0) (== net10.0-windows7.0) (== net11.0) (== net11.0-windows7.0) (== net48)
       xunit.v3.extensibility.core (4.0.3) - restriction: || (== net10.0) (== net10.0-windows7.0) (== net11.0) (== net11.0-windows7.0) (== net48)
       xunit.v3.runner.common (4.0.3) - restriction: || (== net10.0) (== net10.0-windows7.0) (== net11.0) (== net11.0-windows7.0) (== net48)
-  remote: https://nuget.devexpress.com/88luCgoeuPFTrDrTDcc6zKg22U2cVcTm3vdKCv88I7PHF9St6i/api
+  remote: support/nupkg
     DevExpress.Charts (24.2.15) - restriction: || (== net10.0) (== net10.0-windows7.0) (== net11.0) (== net11.0-windows7.0) (== net48)
       DevExpress.Charts.Core (24.2.15) - restriction: || (== net10.0) (== net10.0-windows7.0) (== net11.0) (== net11.0-windows7.0) (== net48)
       DevExpress.Data (24.2.15) - restriction: || (== net10.0) (== net10.0-windows7.0) (== net11.0) (== net11.0-windows7.0) (== net48)
