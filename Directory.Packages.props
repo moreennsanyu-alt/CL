@@ -1,0 +1,287 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
+  <!-- Shared versions -->
+  <PropertyGroup>
+    <DotNetVersion>11.0.0</DotNetVersion>
+    <ServiceStackVersion>10.5.0</ServiceStackVersion>
+    <DevExpressVersion>24.2.15</DevExpressVersion>
+    <PrismVersion>8.1.97</PrismVersion>
+    <OpenTelemetryVersion>1.21.0</OpenTelemetryVersion>
+    <MicrosoftBuildVersion>18.12.2</MicrosoftBuildVersion>
+    <TestPlatformVersion>18.12.0</TestPlatformVersion>
+    <MtpVersion>2.5.3</MtpVersion>
+    <XunitV3Version>4.0.3</XunitV3Version>
+    <VerifyVersion>33.4.0</VerifyVersion>
+    <FlaUIVersion>5.0.0</FlaUIVersion>
+    <MailKitVersion>5.0.0</MailKitVersion>
+    <AsyncAwaitBestPracticesVersion>11.0.0</AsyncAwaitBestPracticesVersion>
+  </PropertyGroup>
+
+  <!-- Build / versioning -->
+  <ItemGroup>
+    <PackageVersion Include="Nerdbank.GitVersioning" Version="3.10.94" />
+  </ItemGroup>
+
+  <!-- Microsoft.Extensions -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Json" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Logging" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Options" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Options.DataAnnotations" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Primitives" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Resilience" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.ApiDescription.Server" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.CommandLine" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.FileExtensions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Xml" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="$(DotNetVersion)" />
+  </ItemGroup>
+
+  <!-- ASP.NET Core / EF Core -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="$(DotNetVersion)" />
+    <PackageVersion Include="SQLite3MC.PCLRaw.bundle" Version="2.7.1" />
+  </ItemGroup>
+
+  <!-- BCL / System -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.CodeAnalysis" Version="5.12.0" />
+    <PackageVersion Include="Microsoft.VisualBasic" Version="10.3.0" />
+    <PackageVersion Include="Microsoft.Windows.Compatibility" Version="$(DotNetVersion)" />
+    <PackageVersion Include="System.Collections.Immutable" Version="$(DotNetVersion)" />
+    <PackageVersion Include="System.Configuration.ConfigurationManager" Version="$(DotNetVersion)" />
+    <PackageVersion Include="System.Diagnostics.DiagnosticSource" Version="$(DotNetVersion)" />
+    <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="8.23.0" />
+    <PackageVersion Include="System.Memory" Version="4.6.3" />
+    <PackageVersion Include="System.Net.Http" Version="4.3.4" />
+    <PackageVersion Include="System.Reflection.Metadata" Version="$(DotNetVersion)" />
+    <PackageVersion Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
+    <PackageVersion Include="System.Security.AccessControl" Version="6.0.1" />
+    <PackageVersion Include="System.Security.Cryptography.Xml" Version="$(DotNetVersion)" />
+    <PackageVersion Include="System.Text.Json" Version="$(DotNetVersion)" />
+    <PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1" />
+    <PackageVersion Include="System.ValueTuple" Version="4.6.2" />
+  </ItemGroup>
+
+  <!-- MSBuild -->
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Build.Tasks.Core" Version="$(MicrosoftBuildVersion)" />
+    <PackageVersion Include="Microsoft.Build.Utilities.Core" Version="$(MicrosoftBuildVersion)" />
+  </ItemGroup>
+
+  <!-- ServiceStack -->
+  <ItemGroup>
+    <PackageVersion Include="ServiceStack" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Api.OpenApi" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Client" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Common" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Extensions" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.HttpClient" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Interfaces" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Jobs" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Kestrel" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Logging.Serilog" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Mvc" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.OrmLite" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.OrmLite.Sqlite" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Server" Version="$(ServiceStackVersion)" />
+    <PackageVersion Include="ServiceStack.Text" Version="$(ServiceStackVersion)" />
+  </ItemGroup>
+
+  <!-- WPF / MVVM -->
+  <ItemGroup>
+    <PackageVersion Include="Prism.Core" Version="$(PrismVersion)" />
+    <PackageVersion Include="Prism.DryIoc" Version="$(PrismVersion)" />
+    <PackageVersion Include="Prism.Wpf" Version="$(PrismVersion)" />
+    <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageVersion Include="DryIoc.Microsoft.DependencyInjection" Version="6.2.0" />
+    <PackageVersion Include="FastExpressionCompiler" Version="6.0.0" />
+    <PackageVersion Include="gong-wpf-dragdrop" Version="4.0.0" />
+    <PackageVersion Include="Interop.UIAutomationClient.Signed" Version="10.19041.0" />
+    <PackageVersion Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.161" />
+    <PackageVersion Include="WPFLocalizeExtensionEzzFork" Version="3.10.1" />
+    <PackageVersion Include="XAMLMarkupExtensionsEzzFork" Version="2.1.4" />
+  </ItemGroup>
+
+  <!-- Async -->
+  <ItemGroup>
+    <PackageVersion Include="AsyncAwaitBestPractices" Version="$(AsyncAwaitBestPracticesVersion)" />
+    <PackageVersion Include="AsyncAwaitBestPractices.MVVM" Version="$(AsyncAwaitBestPracticesVersion)" />
+    <PackageVersion Include="AsyncKeyedLock" Version="8.1.3" />
+    <PackageVersion Include="EnumerableAsyncProcessor" Version="4.0.0" />
+  </ItemGroup>
+
+  <!-- Resilience -->
+  <ItemGroup>
+    <PackageVersion Include="Polly" Version="8.6.4" />
+  </ItemGroup>
+
+  <!-- OpenTelemetry -->
+  <ItemGroup>
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="$(OpenTelemetryVersion)" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="$(OpenTelemetryVersion)" />
+  </ItemGroup>
+
+  <!-- Testing -->
+  <ItemGroup>
+    <PackageVersion Include="xunit.v3" Version="$(XunitV3Version)" />
+    <PackageVersion Include="xunit.v3.extensibility.core" Version="$(XunitV3Version)" />
+    <PackageVersion Include="Xunit.DependencyInjection" Version="12.0.1" />
+    <PackageVersion Include="Xunit.Combinatorial" Version="2.2.3-alpha" />
+    <PackageVersion Include="Xunit.OpenCategories.V3" Version="2.4.1.138-beta" />
+
+    <PackageVersion Include="nunit" Version="5.0.0" />
+    <PackageVersion Include="NUnit.Analyzers" Version="4.15.0" />
+    <PackageVersion Include="NUnit3TestAdapter" Version="6.3.1" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.3.0" />
+    <PackageVersion Include="coverlet.MTP" Version="10.1.1" />
+    <PackageVersion Include="Reqnroll.NUnit" Version="3.3.3" />
+
+    <PackageVersion Include="Microsoft.TestPlatform.ObjectModel" Version="$(TestPlatformVersion)" />
+    <PackageVersion Include="Microsoft.Testing.Platform" Version="$(MtpVersion)" />
+    <PackageVersion Include="Microsoft.Testing.Platform.MSBuild" Version="$(MtpVersion)" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="$(TestPlatformVersion)" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.VideoRecorder" Version="1.0.0-alpha.26561.10" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.HtmlReport" Version="$(MtpVersion)" />
+    <PackageVersion Include="NSubstitute" Version="6.2.0" />
+    <PackageVersion Include="NSubstitute.Analyzers.CSharp" Version="1.0.17" />
+    <PackageVersion Include="EntityFrameworkCore.Testing.NSubstitute" Version="11.0.0-rc01" />
+    <PackageVersion Include="MockQueryable.NSubstitute" Version="11.0.0" />
+    <PackageVersion Include="Moq" Version="4.21.0" />
+    <PackageVersion Include="FluentAssertions" Version="8.5.0" />
+    <PackageVersion Include="Shouldly" Version="4.3.0" />
+    <PackageVersion Include="Respawn" Version="7.0.0" />
+    <PackageVersion Include="Verify" Version="$(VerifyVersion)" />
+    <PackageVersion Include="Verify.XunitV3" Version="$(VerifyVersion)" />
+    <PackageVersion Include="DiffEngine" Version="20.9.0" />
+    <PackageVersion Include="Argon" Version="0.38.2" />
+    <PackageVersion Include="SimpleInfoName" Version="3.2.1" />
+    <PackageVersion Include="FlaUI.Core.Signed" Version="$(FlaUIVersion)" />
+    <PackageVersion Include="FlaUI.UIA2.Signed" Version="$(FlaUIVersion)" />
+    <PackageVersion Include="FlaUI.UIA3.Signed" Version="$(FlaUIVersion)" />
+    <PackageVersion Include="FlaUI.TestUtilities" Version="$(FlaUIVersion)" />
+  </ItemGroup>
+
+  <!-- Analyzers -->
+  <ItemGroup>
+    <PackageVersion Include="AsyncFixer" Version="2.1.0" />
+    <PackageVersion Include="Microsoft.VisualStudio.Threading.Analyzers" Version="18.12.1" />
+    <PackageVersion Include="NetArchTest.eNhancedEdition" Version="1.4.5" />
+    <PackageVersion Include="NsDepCop" Version="3.3.0" />
+    <PackageVersion Include="WpfAnalyzers" Version="4.1.1" />
+  </ItemGroup>
+
+  <!-- Libraries -->
+  <ItemGroup>
+    <PackageVersion Include="Ardalis.GuardClauses" Version="5.0.0" />
+    <PackageVersion Include="AutoMapper" Version="17.0.0" />
+    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="12.2.0" />
+    <PackageVersion Include="MediatR" Version="15.0.0" />
+    <PackageVersion Include="MediatR.Contracts" Version="2.0.1" />
+    <PackageVersion Include="Serilog" Version="4.4.0" />
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageVersion Include="Humanizer.Core" Version="3.0.10" />
+    <PackageVersion Include="Utf8StringInterpolation" Version="1.3.2" />
+    <PackageVersion Include="PolySharp" Version="1.16.0" />
+    <PackageVersion Include="ThisAssembly.Constants" Version="2.1.6" />
+  </ItemGroup>
+
+  <!-- Azure -->
+  <ItemGroup>
+    <PackageVersion Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.5.2" />
+    <PackageVersion Include="Azure.Identity" Version="1.21.0" />
+  </ItemGroup>
+
+  <!-- Mail -->
+  <ItemGroup>
+    <PackageVersion Include="MailKit" Version="$(MailKitVersion)" />
+    <PackageVersion Include="MimeKit" Version="$(MailKitVersion)" />
+  </ItemGroup>
+
+  <!-- API docs / PDF / installer -->
+  <ItemGroup>
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.21.0" />
+    <PackageVersion Include="QuestPDF" Version="2026.9.2" />
+    <PackageVersion Include="Verify.QuestPDF" Version="3.1.0" />
+    <PackageVersion Include="WixSharp_wix4" Version="2.14.2" />
+  </ItemGroup>
+
+  <!-- DevExpress -->
+  <ItemGroup>
+    <PackageVersion Include="DevExpress.Wpf" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Themes.All" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Scheduling" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.DataAccess" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Document.Processor" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Drawing.Skia" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.RichEdit.Export" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Scaffolding.Core" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Scaffolding.EFCore" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Accordion" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Carousel" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Charts" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Core.Extensions" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Diagram" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Dialogs" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Docking" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.DocumentViewer.Core" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.ExpressionEditor" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Gantt" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Gauges" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Grid" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.LayoutControl" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Map" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.NavBar" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.PdfViewer" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.PivotGrid" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Printing" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.PrismAdapters" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.PropertyGrid" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Ribbon" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.RichEdit" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.SchedulingReporting" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.SpellChecker" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Spreadsheet" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.TreeMap" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.TypedStyles" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Mvvm" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Mvvm.CodeGenerators" Version="22.1.1" />
+    <PackageVersion Include="DevExpress.Wpf.ThemesLW" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Themes.Win11Light" Version="$(DevExpressVersion)" />
+    <PackageVersion Include="DevExpress.Wpf.Themes.Win11Dark" Version="$(DevExpressVersion)" />
+  </ItemGroup>
+</Project>
