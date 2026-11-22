@@ -193,10 +193,55 @@ nuget QuestPDF 2026.9.2
 nuget Verify.QuestPDF 3.1.0
 nuget WixSharp_wix4 2.14.2
 
-// ---- Material Design / MahApps ----
-nuget MaterialDesignColors 5.4.0
-nuget Dragablz 0.0.3.234
-nuget MaterialDesignThemes.MahApps 5.4.0
-nuget MahApps.Metro 2.4.11
-nuget MaterialDesignThemes 5.4.0
-nuget ControlzEx 5.0.0
+// ---------- DevExpress ----------
+nuget DevExpress.Wpf 24.2.15
+nuget DevExpress.Wpf.Themes.All 24.2.15
+nuget DevExpress.Wpf.Scheduling 24.2.15
+nuget DevExpress.DataAccess 24.2.15
+nuget DevExpress.Document.Processor 24.2.15
+nuget DevExpress.Drawing.Skia 24.2.15
+nuget DevExpress.RichEdit.Export 24.2.15
+nuget DevExpress.Scaffolding.Core 24.2.15
+nuget DevExpress.Scaffolding.EFCore 24.2.15
+nuget DevExpress.Wpf.Accordion 24.2.15
+nuget DevExpress.Wpf.Carousel 24.2.15
+nuget DevExpress.Wpf.Charts 24.2.15
+nuget DevExpress.Wpf.Core.Extensions 24.2.15
+nuget DevExpress.Wpf.Diagram 24.2.15
+nuget DevExpress.Wpf.Dialogs 24.2.15
+nuget DevExpress.Wpf.Docking 24.2.15
+nuget DevExpress.Wpf.DocumentViewer.Core 24.2.15
+nuget DevExpress.Wpf.ExpressionEditor 24.2.15
+nuget DevExpress.Wpf.Gantt 24.2.15
+nuget DevExpress.Wpf.Gauges 24.2.15
+nuget DevExpress.Wpf.Grid 24.2.15
+nuget DevExpress.Wpf.LayoutControl 24.2.15
+nuget DevExpress.Wpf.Map 24.2.15
+nuget DevExpress.Wpf.NavBar 24.2.15
+nuget DevExpress.Wpf.PdfViewer 24.2.15
+nuget DevExpress.Wpf.PivotGrid 24.2.15
+nuget DevExpress.Wpf.Printing 24.2.15
+nuget DevExpress.Wpf.PrismAdapters 24.2.15
+nuget DevExpress.Wpf.PropertyGrid 24.2.15
+nuget DevExpress.Wpf.Ribbon 24.2.15
+nuget DevExpress.Wpf.RichEdit 24.2.15
+nuget DevExpress.Wpf.SchedulingReporting 24.2.15
+nuget DevExpress.Wpf.SpellChecker 24.2.15
+nuget DevExpress.Wpf.Spreadsheet 24.2.15
+nuget DevExpress.Wpf.TreeMap 24.2.15
+nuget DevExpress.Wpf.TypedStyles 24.2.15
+nuget DevExpress.Mvvm 24.2.15
+nuget DevExpress.Mvvm.CodeGenerators 22.1.1
+nuget DevExpress.Wpf.ThemesLW 24.2.15
+nuget DevExpress.Wpf.Themes.Win11Light 24.2.15
+nuget DevExpress.Wpf.Themes.Win11Dark 24.2.15
+
+
+
+nuget WpfAnalyzers 4.1.1
+nuget Microsoft.VisualStudio.Threading.Analyzers 18.7.23
+nuget EnumerableAsyncProcessor 4.0.0
+nuget AsyncAwaitBestPractices 10.0.0
+nuget AsyncAwaitBestPractices.MVVM 10.0.0
+nuget AsyncKeyedLock 8.1.2
+nuget AsyncFixer 2.1.0
