@@ -1,7 +1,0 @@
-Microsoft.EntityFrameworkCore
-Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
-Microsoft.AspNetCore.Identity.EntityFrameworkCore
-Microsoft.EntityFrameworkCore.Sqlite.Core
-MediatR
-Ardalis.GuardClauses
-SQLite3MC.PCLRaw.bundle
