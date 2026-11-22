@@ -11,5 +11,16 @@
     <Constant Include="BuildInfo.ApplicationPath" Value="$(ArtifactsPath)\bin\ClinicManager.Win\debug\ClinicMgr.exe" />
   </ItemGroup>
   
-  <Import Project="..\..\..\.paket\Paket.Restore.targets" />
+<ItemGroup>
+  <PackageReference Include="xunit.v3" />
+  <PackageReference Include="Xunit.DependencyInjection" />
+  <PackageReference Include="Xunit.OpenCategories.V3" />
+  <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+  <PackageReference Include="Microsoft.Testing.Extensions.HtmlReport" />
+  <PackageReference Include="Shouldly" />
+  <PackageReference Include="FlaUI.Core.Signed" />
+  <PackageReference Include="FlaUI.UIA3.Signed" />
+  <PackageReference Include="FlaUI.TestUtilities" />
+  <PackageReference Include="Xunit.Combinatorial" />
+</ItemGroup>
 </Project>
