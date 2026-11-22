@@ -7,5 +7,12 @@
     <RootNamespace>ClinicManager.Infrastructure.IntegrationTests</RootNamespace>
     <AssemblyName>ClinicManager.Infrastructure.IntegrationTests</AssemblyName>
   </PropertyGroup>
-  <Import Project="..\..\..\.paket\Paket.Restore.targets" />
+
+  <ItemGroup>
+  <PackageReference Include="NUnit" />
+  <PackageReference Include="NUnit3TestAdapter" />
+  <PackageReference Include="NUnit.Analyzers" PrivateAssets="all" />
+  <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+  <PackageReference Include="Microsoft.Testing.Extensions.HtmlReport" />
+</ItemGroup>
 </Project>
