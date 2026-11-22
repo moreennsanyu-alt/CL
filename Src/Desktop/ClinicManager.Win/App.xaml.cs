@@ -11,7 +11,6 @@ using Prism.Ioc;
 using Prism.Regions;
 using System.Runtime.CompilerServices;
 using System.Windows.Media;
-using MaterialDesignThemes.Wpf;
 
 namespace ClinicManager.Win;
 
@@ -20,24 +19,9 @@ public partial class App : PrismApplication
     
     protected override void OnStartup(StartupEventArgs e)
     {
-        
         base.OnStartup(e);
-
-        //Add/Update brush used by Dragablz when the theme changes
-        //Solution for https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit/issues/2349
-        PaletteHelper helper = new PaletteHelper();
-        if (helper.GetThemeManager() is { } themeManager)
-        {
-            themeManager.ThemeChanged += ThemeManager_ThemeChanged;
-        }
     }
 
-    private void ThemeManager_ThemeChanged(object? sender, ThemeChangedEventArgs e)
-    {
-        //Dragablz is still using the old theme brush names so we forward those here
-        Resources["SecondaryAccentBrush"] = new SolidColorBrush(e.NewTheme.SecondaryMid.Color);
-        Resources[SystemColors.ControlTextBrushKey] = new SolidColorBrush(e.NewTheme.Foreground);
-    }
     
     /// <summary>
     /// Prism's DryIoc container with the Microsoft.Extensions.DependencyInjection adapter,
