@@ -1,7 +1,0 @@
-NUnit
-NUnit3TestAdapter
-NUnit.Analyzers
-Shouldly
-Microsoft.Testing.Extensions.CodeCoverage
-Microsoft.Testing.Extensions.HtmlReport
-MediatR.Contracts
