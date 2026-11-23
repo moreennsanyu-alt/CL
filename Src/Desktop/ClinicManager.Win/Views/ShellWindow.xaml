@@ -10,8 +10,6 @@
         Width="1200"
         WindowStartupLocation="CenterScreen"
     >
-    
-    
         <ContentControl x:Name="ShellRegion"
                     AutomationProperties.AutomationId="ShellRegion"
                     prism:RegionManager.RegionName="{x:Static mvvm:RegionNames.Shell}" />
