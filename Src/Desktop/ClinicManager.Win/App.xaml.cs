@@ -25,7 +25,7 @@ public partial class App : PrismApplication
 
     static void SetupThemes()
     { 
-         ApplicationThemeHelper.ApplicationThemeName = Theme.Win11Light;
+         ApplicationThemeHelper.ApplicationThemeName = Theme.Win11LightName;
     }
     
     protected override void OnStartup(StartupEventArgs e)
