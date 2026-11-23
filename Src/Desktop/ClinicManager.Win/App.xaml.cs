@@ -12,6 +12,7 @@ using Prism.Regions;
 using System.Runtime.CompilerServices;
 using System.Windows.Media;
 using DevExpress.Xpf.Core;
+using Container = DryIoc.Container;
 
 namespace ClinicManager.Win;
 
