@@ -114,6 +114,8 @@
   <PackageReference Include="DevExpress.Mvvm" />
   <PackageReference Include="DevExpress.Mvvm.CodeGenerators" PrivateAssets="all" />
   <PackageReference Include="DevExpress.Wpf.ThemesLW" />
+  <PackageReference Include="DevExpress.Wpf.Themes.Win11Dark" />
+  <PackageReference Include="DevExpress.Wpf.Themes.Win11Light" />
 </ItemGroup>
 
 <ItemGroup>
