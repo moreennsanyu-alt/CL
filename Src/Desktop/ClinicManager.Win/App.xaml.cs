@@ -20,25 +20,18 @@ public partial class App : PrismApplication
 {
     static App()
     {
-       SetupThemes();  
-       PreloadThemes();
+        ProfileOptimization.SetProfileRoot(AppContext.BaseDirectory);
+        ProfileOptimization.StartProfile("Startup.Profile");
+
+        ApplicationThemeHelper.ApplicationThemeName = Theme.Win11LightName;
+       
+        PreloadThemes();
     }
     
     [MethodImpl(MethodImplOptions.NoInlining)]
     static void PreloadThemes() {
         SplashScreenManager.CreateThemed().ShowOnStartup();
         ApplicationThemeHelper.Preload(PreloadCategories.Grid, PreloadCategories.LayoutControl);
-    }
-
-    static void SetupThemes()
-    { 
-         ApplicationThemeHelper.ApplicationThemeName = Theme.Win11LightName;
-    }
-    
-    protected override void OnStartup(StartupEventArgs e)
-    {
-    
-        base.OnStartup(e);
     }
 
     
@@ -92,26 +85,28 @@ public partial class App : PrismApplication
 
     protected override void OnInitialized()
     {
-        // Login is a modal window shown before the shell.
-        ShutdownMode = ShutdownMode.OnExplicitShutdown;
-
-        var login = Container.Resolve<LoginView>();
-        if (login.ShowDialog() != true)
-        {
+         ShowLoginWindow();
+    }
+    void ShowLogInWindow()
+    {
+        LoginViewModel loginViewModel = new LoginViewModel(LoginAction);
+        LoginWindow loginWindow = new LoginWindow() { DataContext = loginViewModel };
+        loginWindow.ShowDialog();
+        if (!loginViewModel.IsAuthSuccess) {
             Shutdown();
-            return;
         }
-
-        ShutdownMode = ShutdownMode.OnMainWindowClose;
-
-        var regions = Container.Resolve<IRegionManager>();
-        regions.RegisterViewWithRegion(RegionNames.Shell, typeof(MainView));
-        regions.RegisterViewWithRegion(RegionNames.Content, typeof(HomeView));
-
-        base.OnInitialized();
     }
 
-      protected override Rules CreateContainerRules()
+    async Task<string> LoginAction(string login, string password) {
+        var authService = Container.Resolve.<IAuthService>();
+        string error = await authService.Authenticate(login, password);
+        if (string.IsNullOrEmpty(error)) {
+            Shell.Show();
+        }
+        return error;
+    }
+    
+    protected override Rules CreateContainerRules()
     {
         return Rules.Default.WithConcreteTypeDynamicRegistrations(reuse: Reuse.Transient)
                         .With(Made.Of(FactoryMethod.ConstructorWithResolvableArguments))
