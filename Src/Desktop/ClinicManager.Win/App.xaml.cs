@@ -21,6 +21,13 @@ public partial class App : PrismApplication
     static App()
     {
        SetupThemes();  
+       PreloadThemes();
+    }
+    
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    static void PreloadThemes() {
+        SplashScreenManager.CreateThemed().ShowOnStartup();
+        ApplicationThemeHelper.Preload(PreloadCategories.Grid, PreloadCategories.LayoutControl);
     }
 
     static void SetupThemes()
