@@ -98,8 +98,9 @@ class Build : FalloutBuild
         {
 			
             DotNetRestore(s => s
-                    .SetProjectFile(Solution)
-                    .EnableNoCache());
+                   .SetProjectFile(Solution)
+                   .SetConfigFile(RootDirectory / "nuget.config")
+                   .EnableNoCache());
 	
         });
     Target InjectLicenseKey => _ => _
