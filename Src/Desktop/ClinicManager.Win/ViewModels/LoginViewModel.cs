@@ -1,28 +1,32 @@
 using ClinicManager.Win.Presentation.Mvvm;
 using Prism.Commands;
+using System.Threading.Tasks;
+using DevExpress.Mvvm;
+using DevExpress.Mvvm.CodeGenerators;
 
 namespace ClinicManager.Win.ViewModels;
 
-public class LoginViewModel : ViewModelBase, IWindowCloseRequester
-{
-    private string? _username;
+[GenerateViewModel(ImplementISupportServices = true)]
+public partial class LoginViewModel(Func<string, string, Task<string>> loginFunction) {
+    [GenerateProperty]
+    string username = "Admin";
+    [GenerateProperty]
+    string password = "123";
+    [GenerateProperty]
+    string errorMessage;
+    public bool IsAuthSuccess { get; set; }
+    Func<string, string, Task<string>> LoginFunction = loginFunction;
 
-    public LoginViewModel()
-    {
-        Title = "Sign in";
-        LoginCommand = new DelegateCommand(Login);
+    ICurrentWindowService CurrentWindowService => GetRequiredService<ICurrentWindowService>();
+
+    [GenerateCommand]
+    async Task Login() {
+        ErrorMessage = await LoginFunction(Username, Password);
+        if (!string.IsNullOrEmpty(ErrorMessage))
+            return;
+        IsAuthSuccess = true;
+        CurrentWindowService.Close();
     }
-
-    public event Action<bool?>? RequestClose;
-
-    public string? Username
-    {
-        get => _username;
-        set => SetProperty(ref _username, value);
-    }
-
-    public DelegateCommand LoginCommand { get; }
-
-    // TODO: authenticate through a service (Services layer) before closing.
-    private void Login() => RequestClose?.Invoke(true);
+    bool CanLogin() => !string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password);
 }
+
