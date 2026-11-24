@@ -1,20 +1,13 @@
 using System.Windows;
 using ClinicManager.Win.Presentation.Mvvm;
+using DevExpress.Xpf.Core;
 
 namespace ClinicManager.Win.Views;
 
-public partial class LoginView : Window
+public partial class LoginWindow : ThemedWindow
 {
-    public LoginView()
+    public LoginWindow()
     {
         InitializeComponent();
-
-        DataContextChanged += (_, e) =>
-        {
-            if (e.OldValue is IWindowCloseRequester oldVm) oldVm.RequestClose -= OnRequestClose;
-            if (e.NewValue is IWindowCloseRequester newVm) newVm.RequestClose += OnRequestClose;
-        };
     }
-
-    private void OnRequestClose(bool? result) => DialogResult = result;
 }
