@@ -100,7 +100,7 @@ public partial class App : PrismApplication
 
     async Task<string> LoginAction(string login, string password) {
         var authService = Container.Resolve<IAuthService>();
-        string result= await authService.LoginAsync(login, password);
+        var result = await authService.LoginAsync(login, password);
         if (result.Result == LoginResult.Success) {
             Shell.Show();
         }
