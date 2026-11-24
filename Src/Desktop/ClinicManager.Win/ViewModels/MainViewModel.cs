@@ -11,7 +11,6 @@ public class MainViewModel : ViewModelBase
     public MainViewModel(IRegionManager regionManager)
     {
         _regionManager = regionManager;
-        Title = "Main";
         NavigateCommand = new DelegateCommand<string>(Navigate);
     }
 
