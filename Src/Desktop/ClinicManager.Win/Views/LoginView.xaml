@@ -1,18 +1,40 @@
-<Window x:Class="ClinicManager.Win.Views.LoginView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:prism="http://prismlibrary.com/"
-        prism:ViewModelLocator.AutoWireViewModel="True"
-        AutomationProperties.AutomationId="LoginWindow"
-        Title="{Binding Title}" Height="320" Width="380"
-        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <StackPanel Margin="24" VerticalAlignment="Center">
-        <TextBlock x:Name="LoginTitleText" AutomationProperties.AutomationId="LoginTitleText"
-                   Text="Clinic Manager" Margin="0,0,0,16" />
-        <TextBox x:Name="UsernameTextBox" AutomationProperties.AutomationId="UsernameTextBox"
-                 Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8" />
-        <PasswordBox x:Name="PasswordBox" AutomationProperties.AutomationId="PasswordBox" Margin="0,0,0,16" />
-        <Button x:Name="LoginButton" AutomationProperties.AutomationId="LoginButton"
-                Content="Sign in" IsDefault="True" Command="{Binding LoginCommand}" />
+﻿<dx:ThemedWindow x:Class="WebApiAuth.Views.LoginWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                 xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                 xmlns:mvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+                 Icon="{dx:DXImage 'SvgImages/XAF/Action_Logoff.svg'}"
+                 WindowStartupLocation="CenterScreen"
+                 ResizeMode="NoResize"
+                 mc:Ignorable="d"
+                 Title="Login"
+                 Height="290"
+                 Width="450">
+    <mvvm:Interaction.Behaviors>
+        <mvvm:CurrentWindowService />
+    </mvvm:Interaction.Behaviors>
+    <StackPanel VerticalAlignment="Center">
+        <TextBlock Text="Enter Viewer to log in with read-only access"
+                   Margin="50,0" />
+        <dxe:TextEdit EditValue="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                      Label="Username"
+                      Margin="50,5" />
+        <dxe:PasswordBoxEdit EditValue="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
+                             ShowPasswordButtonVisibility="Auto"
+                             Label="Password"
+                             Margin="50,5" />
+        <TextBlock Text="{Binding ErrorMessage}"
+                   Foreground="#F44336"
+                   Margin="50,0" />
+        <dx:SimpleButton Content="Login"
+                         AsyncDisplayMode="Wait"
+                         Command="{Binding LoginCommand}"
+                         Style="{StaticResource accentButton}"
+                         IsDefault="True"
+                         Height="40"
+                         Margin="50,20" />
     </StackPanel>
-</Window>
+</dx:ThemedWindow>
