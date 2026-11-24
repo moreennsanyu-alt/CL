@@ -66,6 +66,8 @@ global using SerilogLogger = Serilog.ILogger;
 
 global using ClinicManager.Win.Configuration;
 global using ClinicManager.Win.Services;
+global using ViewModelBase = ClinicManager.Win.Presentation.Mvvm.ViewModelBase;
+global using ClinicManager.Win.Presentation.Mvvm;
 
 global using Button = System.Windows.Controls.Button;
 global using CheckBox = System.Windows.Controls.CheckBox;
