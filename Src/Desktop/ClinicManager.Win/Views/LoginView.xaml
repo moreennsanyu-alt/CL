@@ -12,24 +12,30 @@
                  mc:Ignorable="d"
                  Title="Login"
                  Height="290"
-                 Width="450">
+                 Width="450"
+                 AutomationProperties.AutomationId="LoginWindow">
     <mvvm:Interaction.Behaviors>
         <mvvm:CurrentWindowService />
     </mvvm:Interaction.Behaviors>
     <StackPanel VerticalAlignment="Center">
         <TextBlock Text="Enter Viewer to log in with read-only access"
+                   AutomationProperties.AutomationId="LoginHintText"
                    Margin="50,0" />
         <dxe:TextEdit EditValue="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                      AutomationProperties.AutomationId="UsernameEdit"
                       Label="Username"
                       Margin="50,5" />
         <dxe:PasswordBoxEdit EditValue="{Binding Password, UpdateSourceTrigger=PropertyChanged}"
+                             AutomationProperties.AutomationId="PasswordEdit"
                              ShowPasswordButtonVisibility="Auto"
                              Label="Password"
                              Margin="50,5" />
         <TextBlock Text="{Binding ErrorMessage}"
+                   AutomationProperties.AutomationId="ErrorMessageText"
                    Foreground="#F44336"
                    Margin="50,0" />
         <dx:SimpleButton Content="Login"
+                         AutomationProperties.AutomationId="LoginButton"
                          AsyncDisplayMode="Wait"
                          Command="{Binding LoginCommand}"
                          Style="{StaticResource accentButton}"
