@@ -6,6 +6,6 @@ public class HomeViewModel : ViewModelBase
 {
     public HomeViewModel()
     {
-        Title = "Home";
+    
     }
 }
