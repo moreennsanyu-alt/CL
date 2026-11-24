@@ -6,6 +6,5 @@ public class ShellWindowViewModel : ViewModelBase
 {
     public ShellWindowViewModel()
     {
-        Title = "Clinic Manager";
     }
 }
