@@ -99,11 +99,11 @@ public partial class App : PrismApplication
 
     async Task<string> LoginAction(string login, string password) {
         var authService = Container.Resolve.<IAuthService>();
-        string error = await authService.Authenticate(login, password);
-        if (string.IsNullOrEmpty(error)) {
+        string result= await authService.Authenticate(login, password);
+        if (result.Result == LoginResult.Success) {
             Shell.Show();
         }
-        return error;
+        return result.Message;
     }
     
     protected override Rules CreateContainerRules()
