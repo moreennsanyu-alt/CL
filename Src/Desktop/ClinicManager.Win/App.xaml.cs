@@ -14,6 +14,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Media;
 using DevExpress.Xpf.Core;
 using Container = DryIoc.Container;
+using System.Runtime;
 
 namespace ClinicManager.Win;
 
