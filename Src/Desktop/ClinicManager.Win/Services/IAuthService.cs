@@ -18,6 +18,6 @@ public enum LoginResult
 
 public interface IAuthService
 {
-    Task<(LoginResult,string)> LoginAsync(string username, string password, CancellationToken cancellationToken = default);
+    Task<(LoginResult Result,string Message)> LoginAsync(string username, string password, CancellationToken cancellationToken = default);
 }
 
