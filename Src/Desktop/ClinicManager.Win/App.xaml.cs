@@ -102,7 +102,7 @@ public partial class App : PrismApplication
         var authService = Container.Resolve<IAuthService>();
         var result = await authService.LoginAsync(login, password);
         if (result.Result == LoginResult.Success) {
-            Shell.Show();
+            MainWindow?.Show();
         }
         return result.Message;
     }
