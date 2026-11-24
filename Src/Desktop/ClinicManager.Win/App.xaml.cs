@@ -74,7 +74,7 @@ public partial class App : PrismApplication
         containerRegistry.RegisterSingleton<IAuthService, AuthService>();
         
         // Windows
-        containerRegistry.Register<LoginView>();
+        containerRegistry.Register<LoginWindow>();
         containerRegistry.Register<ShellWindow>();
 
         // Region views (navigation names == type names, see ViewNames)
