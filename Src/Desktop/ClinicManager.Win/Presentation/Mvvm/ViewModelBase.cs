@@ -2,13 +2,19 @@ using Prism.Mvvm;
 
 namespace ClinicManager.Win.Presentation.Mvvm;
 
-public abstract class ViewModelBase : BindableBase
+public abstract class ViewModelBase 
+    : ObservableValidator, ISupportServices 
 {
-    private string? _title;
 
-    public string? Title
-    {
-        get => _title;
-        set => SetProperty(ref _title, value);
+    IServiceContainer serviceContainer = null;
+    
+    protected IServiceContainer ServiceContainer {
+        get {
+            if(serviceContainer == null)
+                serviceContainer = new ServiceContainer(this);
+            return serviceContainer; 
+        }
     }
+    IServiceContainer ISupportServices.ServiceContainer { get { return ServiceContainer; } }
+
 }
