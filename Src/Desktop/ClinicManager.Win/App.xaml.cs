@@ -88,7 +88,7 @@ public partial class App : PrismApplication
     {
          ShowLoginWindow();
     }
-    void ShowLogInWindow()
+    void ShowLoginWindow()
     {
         LoginViewModel loginViewModel = new LoginViewModel(LoginAction);
         LoginWindow loginWindow = new LoginWindow() { DataContext = loginViewModel };
