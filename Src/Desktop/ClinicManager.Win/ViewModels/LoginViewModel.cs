@@ -29,7 +29,7 @@ public partial class LoginViewModel(Func<string, string, Task<string>> loginFunc
     
     Func<string, string, Task<string>> LoginFunction = loginFunction;
 
-    ICurrentWindowService CurrentWindowService => GetRequiredService<ICurrentWindowService>();
+    ICurrentWindowService CurrentWindowService => ServiceContainer.GetService<ICurrentWindowService>();
 
     [RelayCommand]
     async Task Login() {
