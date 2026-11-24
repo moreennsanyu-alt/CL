@@ -1,4 +1,5 @@
 using Prism.Mvvm;
+using DevExpress.Mvvm;
 
 namespace ClinicManager.Win.Presentation.Mvvm;
 
