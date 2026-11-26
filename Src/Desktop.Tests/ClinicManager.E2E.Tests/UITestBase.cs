@@ -5,14 +5,14 @@ using FlaUI.Core;
 using FlaUI.Core.Capturing;
 using FlaUI.Core.Logging;
 using FlaUI.Core.Tools;
-using Xunit;
+using FlaUI.TestUtilities;
 
 namespace ClinicManager.E2E.Tests.Core
 {
     public abstract class UITestBase : FlaUITestBase
     {
         
-        public readonly string MediaPath => @"c:\temp\testsmedia";
+        public  string MediaPath => @"c:\temp\testsmedia";
 
         public UITestBase()
         {
