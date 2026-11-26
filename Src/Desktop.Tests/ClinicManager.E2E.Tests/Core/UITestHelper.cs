@@ -49,11 +49,11 @@ public static class UITestHelper
         return (element.GetWindow().ContextMenu ?? throw new ElementFoundException("The ContextMenu was not found.")).AsMenu();
     }
 
-    public static Window FirstModalWindow(this Window window, TimeSpan? timeout = null)
-    {
-        var result = Retry.WhileEmpty(() => window.ModalWindows, timeout ?? Retry.DefaultTimeout * 2);
-        return result?.Result?.FirstOrDefault() ?? throw new ElementNotFoundException($"First modal dialog was not found for window '{window.TryAutomationId()}'");
-    }
+    //public static Window FirstModalWindow(this Window window, TimeSpan? timeout = null)
+   // {
+     //   var result = Retry.WhileEmpty(() => window.ModalWindows, timeout ?? Retry.DefaultTimeout * 2);
+    //    return result?.Result?.FirstOrDefault() ?? throw new ElementNotFoundException($"First modal dialog was not found for window '{window.TryAutomationId()}'");
+  //  }
 
     public static string GetTree(this AutomationElement element)
     {
