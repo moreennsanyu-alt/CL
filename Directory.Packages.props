@@ -93,7 +93,7 @@
     <PackageVersion Include="System.Text.Json" Version="$(DotNetVersion)" />
     <PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1" />
     <PackageVersion Include="System.ValueTuple" Version="4.6.2" />
-    <PackageVersion Include="System.Security.Cryptography.Pkcs" Version="$(DotNetVersion)"" />
+    <PackageVersion Include="System.Security.Cryptography.Pkcs" Version="$(DotNetVersion)" />
   
   </ItemGroup>
 
