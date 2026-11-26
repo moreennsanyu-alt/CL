@@ -62,10 +62,10 @@ public partial class App : PrismApplication
             c.EnableLogging = false;
             c.ConnectionString = "Server=...;";
         });
-        services.AddHttpClient<IApiClient, ApiClient>(client =>
-        {
-            client.BaseAddress = new Uri("https://localhost:5001/");
-        });
+        //services.AddHttpClient<IApiClient, ApiClient>(client =>
+        //{
+        //    client.BaseAddress = new Uri("https://localhost:5001/");
+       // });
     }
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
