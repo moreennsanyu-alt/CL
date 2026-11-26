@@ -4,7 +4,7 @@ namespace ClinicManager.E2E.Tests
     public class EmptyTests : UITestBase
     {
     
-        [Fact]
+        [Test]
         public void TestMethodName()
         {
             var loginWindow = GetLoginWindow();
