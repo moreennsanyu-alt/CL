@@ -92,12 +92,12 @@ jobs:
             artifacts/attachments/testresults/**/*.bmp
             artifacts/attachments/testresults/**/*.avi
             artifacts/attachments/testresults/**/*.html
-            c:/temp/testsmedia/**/*.avi
-            c:/temp/testsmedia/**/*.png
-            c:/temp/testsmedia/**/*.jpg
-            c:/temp/testsmedia/**/*.jpeg
-            c:/temp/testsmedia/**/*.gif
-            c:/temp/testsmedia/**/*.bmp
+            artifacts/testsmedia/**/*.avi
+            artifacts/testsmedia/**/*.png
+            artifacts/testsmedia/**/*.jpg
+            artifacts/testsmedia/**/*.jpeg
+            artifacts/testsmedia/**/*.gif
+            artifacts/testsmedia/**/*.bmp
           if-no-files-found: ignore
         
     
