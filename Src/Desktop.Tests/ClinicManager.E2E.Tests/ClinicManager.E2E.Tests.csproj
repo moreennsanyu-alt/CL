@@ -18,6 +18,10 @@
   <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
   <PackageReference Include="Microsoft.Testing.Extensions.HtmlReport" />
   <PackageReference Include="Shouldly" />
+  <PackageReference Include="PolySharp" >
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+  </PackageReference>
   <PackageReference Include="FlaUI.Core.Signed" />
   <PackageReference Include="FlaUI.UIA3.Signed" />
   <PackageReference Include="FlaUI.TestUtilities" />
