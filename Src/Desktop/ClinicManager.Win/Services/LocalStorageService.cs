@@ -6,7 +6,6 @@ using Microsoft.Extensions.Options;
 
 namespace ClinicManager.Win.Services;
 
-[SupportedOSPlatform("windows")]
 public sealed class LocalStorageService : ILocalStorageService
 {
     private static readonly JsonSerializerOptions JsonOptions = new()
