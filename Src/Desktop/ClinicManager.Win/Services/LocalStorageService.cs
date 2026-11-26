@@ -12,7 +12,9 @@ namespace ClinicManager.Win.Services
     {
         private readonly string _folder;
         private readonly byte[] _entropy;
-
+   
+        public LocalStorageService(IOptions<ApplicationConfiguration> options)
+      
         {
             var config = options.Value;
 
