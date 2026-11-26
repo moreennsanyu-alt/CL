@@ -68,7 +68,16 @@ jobs:
           NuGetApiKey: ${{ secrets.NUGETAPIKEY }}
           GitHubToken: ${{ secrets.GITHUB_TOKEN }}
           AppKey: ${{ secrets.LICKEY }}
-        
+
+      - name: Collect test media
+        if: always()
+        shell: pwsh
+        run: |
+          $dest = "$env:GITHUB_WORKSPACE\artifacts\testsmedia"
+          New-Item -ItemType Directory -Force -Path $dest | Out-Null
+          if (Test-Path "C:\temp\testsmedia") {
+          Copy-Item "C:\temp\testsmedia\*" $dest -Recurse -Force
+          }
         
       - name: Upload test result images
         if: always()
