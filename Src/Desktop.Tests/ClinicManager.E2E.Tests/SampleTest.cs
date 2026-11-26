@@ -11,12 +11,7 @@ namespace ClinicManager.E2E.Tests
             loginWindow.LoginButton.Click();
             
             //shellWindow.SendButton.Click();
-           Thread.Sleep(TimeSpan.FromSeconds(20));
-            var path = TakeScreenShot("hello1");
-            TestContext.Current.AddAttachment(
-                           name: "hello1.png",
-                           value: File.ReadAllBytes(path),
-                           mediaType: "image/png");
+           Thread.Sleep(TimeSpan.FromSeconds(10));
             throw new NotImplementedException();
         }
 
