@@ -83,6 +83,7 @@
   <PackageReference Include="Serilog" />
   <PackageReference Include="Humanizer.Core" />
   <PackageReference Include="Utf8StringInterpolation" />
+  <PackageReference Include="Newtonsoft.Json" />
   
 </ItemGroup>
 
