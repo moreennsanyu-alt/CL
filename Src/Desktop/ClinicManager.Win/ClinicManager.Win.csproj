@@ -74,7 +74,10 @@
   <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" PrivateAssets="all" />
   <PackageReference Include="NsDepCop" PrivateAssets="all" />
   <PackageReference Include="WpfAnalyzers" PrivateAssets="all" />
-
+  <PackageReference Include="PolySharp" >
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   <!-- Libraries -->
   <PackageReference Include="Ardalis.GuardClauses" />
   <PackageReference Include="Serilog" />
