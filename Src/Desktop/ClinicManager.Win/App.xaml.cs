@@ -99,16 +99,20 @@ public partial class App : PrismApplication
         }
     }
 
-    async Task<string> LoginAction(string login, string password) {
-        var authService = Container.Resolve<IAuthService>();
-        var result = await authService.LoginAsync(login, password);
-        if (result.Result == LoginResult.Success) {
+    async Task<string> LoginAction(string login, string password)
+    {
+        var authResult = await authService.LoginAsync(login, password);
+
+        if (authResult.Result == LoginResult.Success)
+        {
             MainWindow?.Show();
+            return string.Empty; // Successful login
         }
-        return result.Message;
-    }
+
+        return authResult.Message; // Failed login
+     }
     
-    protected override Rules CreateContainerRules()
+ protected override Rules CreateContainerRules()
     {
         return Rules.Default.WithConcreteTypeDynamicRegistrations(reuse: Reuse.Transient)
                         .With(Made.Of(FactoryMethod.ConstructorWithResolvableArguments))
