@@ -18,7 +18,6 @@
   <PackageReference Include="Microsoft.Testing.Extensions.HtmlReport" />
   <PackageReference Include="NSubstitute" />
   <PackageReference Include="NSubstitute.Analyzers.CSharp" PrivateAssets="all" />
-  <PackageReference Include="MockQueryable.NSubstitute" />
   <PackageReference Include="FluentAssertions" />
   <PackageReference Include="Verify" />
   <PackageReference Include="PolySharp" >
