@@ -183,7 +183,6 @@
     <PackageVersion Include="NSubstitute" Version="6.2.0" />
     <PackageVersion Include="NSubstitute.Analyzers.CSharp" Version="1.0.17" />
     <PackageVersion Include="EntityFrameworkCore.Testing.NSubstitute" Version="11.0.0-rc01" />
-    <PackageVersion Include="MockQueryable.NSubstitute" Version="11.0.0" />
     <PackageVersion Include="Moq" Version="4.21.0" />
     <PackageVersion Include="FluentAssertions" Version="8.5.0" />
     <PackageVersion Include="Shouldly" Version="4.3.0" />
