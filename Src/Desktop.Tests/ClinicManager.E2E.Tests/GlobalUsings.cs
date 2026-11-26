@@ -7,7 +7,7 @@ global using FlaUI.Core.AutomationElements;
 global using FlaUI.Core.WindowsAPI;
 global using FlaUI.Core.Definitions;
 
-global using Xunit;
+global using NUnit.Framework;
 
 global using OperatingSystem = FlaUI.Core.Tools.OperatingSystem;
 global using static ThisAssembly.Constants;
