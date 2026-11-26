@@ -32,6 +32,9 @@
 
 <ItemGroup>
   <PackageReference Include="WixSharp_wix4" />
-  <PackageReference Include="PolySharp" PrivateAssets="all" />
+  <PackageReference Include="PolySharp" Version="1.17.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+  </PackageReference>
 </ItemGroup>
 </Project>
