@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Configurations>Debug;Release;E2ETests;CI</Configurations>
-    <LangVersion>14.0</LangVersion>
+    <LangVersion>15.0</LangVersion>
   </PropertyGroup>
 
 <PropertyGroup>
