@@ -1,7 +1,7 @@
 namespace ClinicManager.E2E.Tests
 {
     
-    public class EmptyTests : FlaUITestBase
+    public class EmptyTests : UITestBase
     {
     
         [Fact]
