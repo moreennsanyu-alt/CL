@@ -6,7 +6,7 @@
 
   <!-- Shared versions -->
   <PropertyGroup>
-    <DotNetVersion>9.0.23</DotNetVersion>
+    <DotNetVersion>10.0.15</DotNetVersion>
     <ServiceStackVersion>10.5.0</ServiceStackVersion>
     <DevExpressVersion>24.2.15</DevExpressVersion>
     <PrismVersion>8.1.97</PrismVersion>
@@ -56,7 +56,7 @@
     <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="$(DotNetVersion)" />
     <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(DotNetVersion)" />
     <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="$(DotNetVersion)" />
-    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="$(DotNetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="9.1.0" />
   </ItemGroup>
 
   <!-- ASP.NET Core / EF Core -->
@@ -93,6 +93,8 @@
     <PackageVersion Include="System.Text.Json" Version="$(DotNetVersion)" />
     <PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1" />
     <PackageVersion Include="System.ValueTuple" Version="4.6.2" />
+    <PackageVersion Include="System.Security.Cryptography.Pkcs" Version="$(DotNetVersion)"" />
+  
   </ItemGroup>
 
   <!-- MSBuild -->
