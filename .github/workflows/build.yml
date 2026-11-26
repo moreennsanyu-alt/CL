@@ -83,6 +83,12 @@ jobs:
             artifacts/attachments/testresults/**/*.bmp
             artifacts/attachments/testresults/**/*.avi
             artifacts/attachments/testresults/**/*.html
+            c:/temp/testsmedia/**/*.avi
+            c:/temp/testsmedia/**/*.png
+            c:/temp/testsmedia/**/*.jpg
+            c:/temp/testsmedia/**/*.jpeg
+            c:/temp/testsmedia/**/*.gif
+            c:/temp/testsmedia/**/*.bmp
           if-no-files-found: ignore
         
     
